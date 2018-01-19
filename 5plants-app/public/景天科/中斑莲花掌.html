@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>景天科-中斑莲花掌</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>中斑莲花掌</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/中斑莲花掌.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>中斑莲花掌</h2>
+                <p>拉丁名 Aeonium tabuliforme f.cristata</p>
+            </div>
+            <div class="swiper-slide">
+                <p>景天科</p>
+                <p>莲花掌属</p>
+                <p>原产于墨西哥，现世界各地均有栽培。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    根茎粗壮，有多数长丝状气生根。叶蓝灰色，近圆形或倒卵形，先端圆钝近平截形，红色，无叶柄。
+                    喜温暖、干燥、阳光充足的环境，也耐半阴，不耐寒，耐干旱，怕积水，忌烈日。
+                    中斑莲花掌对日照需求不是太多，根系比较发达，老株可以多浇水但是切勿积水，积水容易导致枝干腐烂黑化，
+                    中斑莲花掌属于"冬种型"，夏季高温休眠会掉落部分叶片，中斑莲花掌繁殖以扦插为主
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/景天科/莲花掌属/中斑莲花掌.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/景天科/莲花掌属/中斑莲花掌.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/景天科/莲花掌属/中斑莲花掌.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../jingtianke4.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

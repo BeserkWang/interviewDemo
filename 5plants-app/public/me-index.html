@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>me-index</title>
+	<script src="js/flexible.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="css/public.css" />
+	<link rel="stylesheet" type="text/css" href="css/me-index.css" />
+</head>
+
+<body>
+	<header>
+		<h3>我的</h3>
+	</header>
+	<div class="container">
+		<!--个人头像部分-->
+		<div id="app">
+			<div class="pro-pho">
+				<!-- onerror="this.src='/img/6.jpg'" -->
+				<img src=""  onerror="this.src='./img/100.jpg'">
+				<input type="file" id="uploadA" accept="png/jpg">
+			</div>
+			<div class="app-word">
+				<p class="username"></p>
+				<p>大家好我是新手,请多多指教</p>
+			</div> 
+		</div>
+		<!--列表组链接部分-->
+		<table class="melist">
+			<tr>
+				<a href="#">
+					<td style="border-top: none; border-left: none; color: #259b24;">
+						<i class="iconfont icon-iconcopy"></i>
+						<br />
+						<span>个人信息</span>
+					</td>
+				</a>
+				<a href="#">
+					<td style="border-top: none;color: #0a8f08">
+						<i class="iconfont icon-wodexiaoxi"></i>
+						<br />
+						<span>我的消息</span>
+					</td>
+				</a>
+				<a href="#">
+					<td style="border-top: none;border-right: none;color:#0a7e07">
+						<i class="iconfont icon-wodeshoucang"></i>
+						<br />
+						<span>我的收藏</span>
+					</td>
+				</a>
+			</tr>
+			<tr>
+				<a href="#">
+					<td style="border-left:none;color: #056f00;">
+						<i class="iconfont icon-qianbao"></i>
+						<br />
+						<span>我的钱包</span>
+					</td>
+				</a>
+				<a href="#">
+					<td style="color: #056f00;">
+						<i class="iconfont icon-wodedingdan"></i>
+						<br />
+						<span>我的订单</span>
+					</td>
+				</a>
+				<a href="#">
+					<td style="border-right: none;color:#0a7e07">
+						<i class="iconfont icon-jifenshangcheng"></i>
+						<br />
+						<span>积分商城</span>
+					</td>
+				</a>
+			</tr>
+			<tr>
+				<a href="#">
+					<td style="border-bottom: none; border-left: none;color: #0a8f08">
+						<i class="iconfont icon-shezhi2-copy"></i>
+						<br />
+						<span>设置</span>
+					</td>
+				</a>
+				<a href="#">
+					<td style="border-bottom: none;color: #056f00;">
+						<i class="iconfont icon-lianxiwomen"></i>
+						<br />
+						<span>联系我们</span>
+					</td>
+				</a>
+				<a href="#">
+					<td style="border-bottom: none;border-right: none;color: #259b24;">
+						<i class="iconfont icon-yejianmoshi"></i>
+						<br />
+						<span>夜间模式</span>
+					</td>
+				</a>
+
+			</tr>
+		</table>
+		<div class="line"></div>
+		<!--底部导航条-->
+		<ul class="tab">
+			<li>
+				<a href="index.html">
+					<i class="iconfont icon-bangbangtang"></i>
+					<br>
+					<span class="tab-label firstTab">肉圈</span>
+				</a>
+			</li>
+			<li>
+				<a href="addVarietys.html">
+					<i class="iconfont icon-zhiwu"></i>
+					<br>
+					<span class="tab-label">养护</span>
+				</a>
+			</li>
+			<li>
+				<a href="index.html#mask">
+					<i class="iconfont icon-iconjia"></i>
+				</a>
+			</li>
+			<li>
+				<a href="goodplace.html">
+					<i class="iconfont icon-jishi"></i>
+					<br>
+					<span class="tab-label">带你玩</span>
+				</a>
+			</li>
+			<li>
+				<a href="me-index.html">
+					<i class="iconfont icon-wo active"></i>
+					<br>
+					<span class="tab-label active">我</span>
+				</a>
+			</li>
+		</ul>
+		<!--底部导航条   end-->
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/jquery.html5uploader.min-1.js"></script>
+		<script src="js/me-index.js"></script>
+</body>
+
+</html>

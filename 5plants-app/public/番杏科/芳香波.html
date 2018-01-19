@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>番杏科-芳香波</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>芳香波</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/芳香波.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>芳香波</h2>
+                <p>拉丁名 Stomatium niveum</p>
+            </div>
+            <div class="swiper-slide">
+                <p>番杏科</p>
+                <p>楠舟属</p>
+                <p>原产地为于非洲南部地区</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    喜温暖、干燥和阳光充足的环境，不耐寒，忌水湿和酷暑，夏季有短暂休眠，春季开出有香味儿的花朵。
+                    盆栽多肉植物，观赏性植物。生长适温15-25度，冬季不低于10度；配土一般可用泥炭、蛭石和珍珠岩的混合土；生长期浇水不宜多，勤喷水控制浇水，保持盆土稍潮润即可；生长期施肥一般每月一次；
+                    特别要掌握好夏季休眠期的控水、通风、遮荫、停肥等环节。主要是扦插，也可以用播种繁殖，
+                    
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/番杏科/楠周属/芳香波.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/番杏科/楠周属/芳香波.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/番杏科/楠周属/芳香波.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../fanxingke3.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

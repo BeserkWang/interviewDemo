@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>景天科-千兔耳</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>千兔耳</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/千兔耳.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>千兔耳</h2>
+                <p>拉丁名 Kalanchoemillotii</p>
+            </div>
+            <div class="swiper-slide">
+                <p>景天科</p>
+                <p>加蓝菜属</p>
+                <p>原产于非洲马达加斯加岛。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    表面有一层软绒毛，摸起来很有手感，千兔耳的美，除了它的毛毛叶外，还有那非常对称整齐的对生叶，锯齿状的叶，有点萌萌白
+                    枫叶的即视感，整体跟人一种毛绒绒的可爱感。枝干易木质化，可通过断水来塑型。相对来说，白兔耳会比较少见，价格也更贵点。
+                    千兔耳属于夏种型，非常喜欢日照，日照充足的情况下叶片呈白色，缺少日照转变为绿色并慢慢往下塌，对水分要求稍多，生长速度相对较快，几乎全年都在生长。可以忍受轻微的霜害，可以容忍很高的温度，
+                    平常可以全日照或着轻微遮蔽，夏天可以常浇水(兔子系列大都是夏型种)。千兔耳繁殖方式主要是叶插和枝插。
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/景天科/加蓝菜属/千兔耳.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/景天科/加蓝菜属/千兔耳.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/景天科/加蓝菜属/千兔耳.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../jingtianke4.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

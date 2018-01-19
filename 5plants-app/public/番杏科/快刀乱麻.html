@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>番杏科-快刀乱麻</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>快刀乱麻</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/快刀乱麻.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>快刀乱麻</h2>
+                <p>拉丁名 Rhombophyllum nelii</p>
+            </div>
+            <div class="swiper-slide">
+                <p>番杏科</p>
+                <p>快刀乱麻属</p>
+                <p>原产产于南非开普省，现世界多地可栽培。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    多肉植物，植株呈肉质灌本状，高20~30厘米，茎有短节，多分技。
+                    叶集中在分枝顶端，对生，细长而侧扁，长约1.5厘米，先端两裂，外侧圆弧状，好似一把刀，叶色淡绿至灰绿色。
+                    宜阳光充足和温暖、干燥的环境。快刀乱麻的繁殖可在生长季节剪取带叶的分枝进行扦插。
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/番杏科/快刀乱麻属/快刀乱麻.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/番杏科/快刀乱麻属/快刀乱麻.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/番杏科/快刀乱麻属/快刀乱麻.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../fanxingke3.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

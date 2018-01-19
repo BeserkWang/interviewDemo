@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>鸭跖草科-白雪姬</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>白雪姬</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/白雪姬.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>白雪姬</h2>
+                <p>拉丁名 Tradescantia sillamontana</p>
+            </div>
+            <div class="swiper-slide">
+                <p>鸭跖草科</p>
+                <p>鸭跖草属</p>
+                <p>原产中南美洲的危地马拉、伯利兹、墨西哥等国，现世界多地可栽培。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    多年生肉质草本植物。植株丛生，茎直立或稍匍匐，高15～20厘米，短粗的肉质茎硬而直，被有浓密的白色长毛。 叶互生，绿色或褐绿色，稍具肉质，长卵形，叶长约2厘米，宽1厘米，也被有浓密的白毛。小花淡紫粉色，着生于茎的顶部。 宜温暖、湿润的环境和充足而柔和的阳光，耐半阴和干旱，不耐寒，忌烈日曝晒和盆土积水。生长适温16～24℃，
+                    在此条件下可将植株放在光线明亮又无直射阳光处养护。
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/鸭跖草科/鸭跖草属/白雪姬.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/鸭跖草科/鸭跖草属/白雪姬.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/鸭跖草科/鸭跖草属/白雪姬.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            //按钮返回事件
+            var goBack = document.querySelector('.go-back');
+            goBack.onclick = function () {
+                window.location.href = '../yazhicaoke8.html'
+            }
+            var mySwiper = new Swiper('.swiper-container', {
+                direction: 'vertical',
+                // loop: true,
+                // 如果需要滚动条
+                hashnav: true,
+                scrollbar: '.swiper-scrollbar',
+            })
+        }
+    </script>
+</body>
+
+</html>

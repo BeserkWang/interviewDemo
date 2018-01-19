@@ -1,0 +1,29 @@
+/* 返回按钮 */
+.go-back {
+    font-size: 0.3867rem;
+    color: #eeeeee;
+    position: relative;
+    top: -0.1333rem;
+}
+/* 记录日期 */
+.record-day {
+    font-size: 0.8rem;
+    margin: 0.5667rem;
+    color: rgb(114, 110, 110);
+
+}
+.color i{
+    color: yellow!important;
+}
+.recording-list {
+    /* margin-top: 50px; */
+}
+.record-content {
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid #88cb84;
+    height: auto;
+    font-size: 0.426666667rem;
+    word-wrap: break-word;
+    text-indent: 2em;
+}

@@ -1,0 +1,57 @@
+
+/* 转换rem  px*2 / 75 */
+/* 斜线部分 */
+.line-slant {
+    border-bottom: 1px solid #88cb84;
+    width: 100%;
+    /* margin-top: 10px; */
+    transform: rotate(-19deg);
+    position: relative;
+    top: 1.6rem;
+    left: -0.29333333rem;
+}
+/* 标题部分 */
+
+h2.old-variety-title {
+    margin-left: 0.533333333rem;
+    font-size: 0.48rem;
+    font-family: "Arial";
+    color: #88cb84;
+    position: relative;
+    top: 0.77333333333rem;
+}
+/* 已有品种部分 */
+.old-variety {
+    width: 100%;
+    position: relative;
+    top: 1.2rem;
+}
+.show-variety {
+    width: 100%;
+    height: 6.666666667rem;
+    border: 0.10666666667rem solid #9cc798;
+    overflow-y: scroll;
+}
+.show-variety li {
+    width: 80%;
+    height:0.533333333rem;
+    margin-left: 5%;
+    margin-top: 0.266666667rem;
+    font-size: 0.48rem;
+    color: #77be72;
+    padding-left: 2.133333333rem;
+
+}
+.show-variety li span {
+    font-size: 0.37333333333rem;
+    color: #8fda89;
+}
+.show-variety li span a {
+    color: #82db6c;
+    font-weight: bold;
+    font-size: 0.5333333333rem;
+    opacity: 0.8;
+    font-style: italic;
+
+}
+

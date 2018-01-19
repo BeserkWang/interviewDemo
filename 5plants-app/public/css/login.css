@@ -1,0 +1,64 @@
+/*头部的a标签 注册*/
+header{
+	position: relative;
+}
+header a {
+	position: absolute;
+	top: 0.5333333rem;
+	right: 0.266666667rem;
+	font-size: 0.4rem;
+    color: #ffffff;
+}
+/*登录的输入框重写*/
+.input-group{
+    width: 8rem;
+    border: solid 1px gray;
+    border-radius: 10px;
+    height: 3.3rem;
+    padding: 1px 0;
+    box-shadow: 0.16rem 0.16rem 0.16rem #F0EDED;
+}
+/*第三方登录部分*/
+.line-grp{
+    width: 100%;
+    height: 0.38rem;
+    text-align: center;
+    padding: 0 0.26rem;
+    margin-top: 1.87rem;
+}
+.word2{
+   position: relative;
+    top:-0.4rem;
+    z-index: 1;
+    background-color: white;
+    font-size: 0.37rem;
+    color: #999999;
+    padding: 0 0.1rem;
+}
+/*第三方登录的三个图标*/
+.bit-grp{
+    width:8rem;
+    margin: 1.3rem auto;
+}
+button{
+    box-shadow: 0.16rem 0.16rem 0.16rem #f5f7f2;
+    background-size: 100% 100%;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    float: left;
+}
+.weixin{
+    background-image: url("../img/icon_login_weixin_nor.pnng.png");
+
+}
+.qq{
+    background-image: url("../img/icon_login_qq_nor.png.png");
+    margin: 0 2.1rem;
+}
+.weibo{
+    background-image: url("../img/icon_login_weibo_nor.png.png");
+
+}

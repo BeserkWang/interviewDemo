@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文章列表</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            width: 200px;
+            height: 20px;
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <a href="add.html">新增</a><br><br>
+    <span>根据标题获取一篇文章</span><input type="text" id="aContent"> <input type="submit" value="查询" id="aSearch" onclick="doSearch()"><br><br>
+    <table>
+        <thead>
+            <td>标题</td>
+            <td>分类</td>
+            <td>简介</td>
+            <td>删除</td>
+        </thead>
+        <tbody id="tb">
+             <!-- 显示的内容 -->
+        </tbody>
+    </table>
+    <script src="js/index.js"></script>
+</body>
+</html>

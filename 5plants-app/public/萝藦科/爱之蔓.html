@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>萝藦科-爱之蔓</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>爱之蔓</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/爱之蔓.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>爱之蔓</h2>
+                <p>拉丁名 Ceropegia woodii</p>
+            </div>
+            <div class="swiper-slide">
+                <p>萝藦科</p>
+                <p>吊灯花属</p>
+                <p>原产在南非及津巴布韦，现世界多地可栽培。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    爱之蔓具蔓性，可匍匐于地面或悬垂，长度可达150-200cm。叶心形 ，对生，长1.0-1.5cm，宽约1.5cm，叶面上有灰色网状花纹，叶背呈紫红色；叶腋处会长出圆形块茎，称“零余子”，有贮存养分、水分及繁殖的功用。
+                    春、夏季时，成株会开出红褐色、壶状的花，长约2.5cm，花后结出羊角状的果实。爱之蔓适宜的生长温度为15~25℃，但也能耐受夏季35℃的高温，能耐受冬天10℃左右的低温，对温度的适应性较强。
+                    性喜散射光，忌强光直射。不喜肥，特别忌施高磷钾肥。可以采取扦插、高压、零余子和播种繁殖。但扦插繁殖是其中最常用的繁殖方法。
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/萝藦科/吊灯花属/爱之蔓.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/萝藦科/吊灯花属/爱之蔓.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/萝藦科/吊灯花属/爱之蔓.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../luomoke5.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>养护页面</title>
+	<script src="js/flexible.js"></script>
+	<script src="js/iconfont.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/public.css" />
+	<link rel="stylesheet" type="text/css" href="css/recording.css" />
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+	<link rel="stylesheet" href="css/middle-tab.css">
+	<!-- <script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+	<style>
+		/* .ui-page{
+			min-height: 900px!important;
+		}
+		.ui-loader h1 {
+			display: none;
+		} */
+	</style>
+</head>
+
+<body>
+	<header class="header">
+		<h3>养护</h3>
+		<a href="./watching.html" class="fl">返回</a>
+	</header>
+
+	<!--日历部分 -->
+	<div class="calender" id='date'>
+
+	</div>
+	<!-- 日历部分 end -->
+
+	<!-- 记录条目部分 -->
+	<div class="recording-list">
+		<section class="variety rec-li" style="border-top:none;">
+			<div class="recording-wrap">
+				<p class="recoding-title fl">
+					<i class="iconfont icon-lvdizhiwupinzhong"></i>品种</p>
+				<input type="text" class="fr variety-input" id="variety-input">
+				<i class="iconfont icon-fabutiezi variety-write"></i>
+			</div>
+			<div class="clearfloat"></div>
+		</section>
+		<section class="weather rec-li">
+			<div class="recording-wrap">
+				<p class="recoding-title fl">
+					<i class="iconfont icon-tianqichaxun"></i>天气</p>
+				<ul class="level fr level-weather">
+					<li>
+						<i class="iconfont icon-qinglang"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-duoyun"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-xiayu"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-dalei"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-xiaxue"></i>
+					</li>
+					<li id="weather-tips"></li>
+				</ul>
+			</div>
+		</section>
+		<section class="leaf-color rec-li">
+			<div class="recording-wrap">
+				<p class="recoding-title fl">
+					<i class="iconfont icon-yezi"></i>叶子颜色</p>
+				<ul class="level fr level-leaves">
+					<li>
+						<i class="iconfont icon-yezi1"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-yezi1"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-yezi1"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-yezi1"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-yezi1"></i>
+					</li>
+					<li id="leaves-tips"></li>
+				</ul>
+			</div>
+		</section>
+		<section class="watering rec-li">
+			<div class="recording-wrap">
+				<p class="recoding-title fl">
+					<i class="iconfont icon-jiaoshui"></i>浇水</p>
+				<ul class="level fr level-water">
+					<li>
+						<i class="iconfont icon-shape6"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-shape6"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-shape6"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-shape6"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-shape6"></i>
+					</li>
+					<li id="water-tips"></li>
+				</ul>
+			</div>
+		</section>
+		<section class="fertilizing rec-li">
+			<div class="recording-wrap">
+				<p class="recoding-title fl">
+					<i class="iconfont icon-fertilize-copy"></i>施肥</p>
+				<ul class="level fr level-fer">
+					<li>
+						<i class="iconfont icon-icon-test"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-icon-test"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-icon-test"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-icon-test"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-icon-test"></i>
+					</li>
+					<li id="fer-tips"></li>
+				</ul>
+			</div>
+		</section>
+		<section class="digging rec-li">
+			<div class="recording-wrap">
+				<p class="recoding-title fl">
+					<i class="iconfont icon-turang"></i>是否松土</p>
+				<!--加开关 -->
+				<div class="turn-wrap fr">
+					<div class="turn"></div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+	<!-- 养护部分的tab切换 -->
+	<div class="index-icons">
+		<div class="icons">
+			<a onclick="add()">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-iconjia"></use>
+				</svg>
+				<br>
+				<section>增添肉肉</section>
+			</a>
+			<a>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-iconjia"></use>
+				</svg>
+				<br>
+				<section>上传照片</section>
+				<input type="file" style="opacity:0;position:relative;top:-50px;left:15px;" accept="png/jpg" id="uploadPic">
+			</a>
+		</div>
+	</div>
+	<!-- 养护部分的tab切换 end-->
+
+	<!--底部导航条-->
+	<ul class="tab">
+		<li>
+			<a href="index.html">
+				<i class="iconfont icon-bangbangtang"></i>
+				<br>
+				<span class="tab-label firstTab">肉圈</span>
+			</a>
+		</li>
+		<li>
+			<a href="addVarietys.html">
+				<i class="iconfont icon-zhiwu active"></i>
+				<br>
+				<span class="tab-label  active">养护</span>
+			</a>
+		</li>
+		<li>
+			<a href="index.html#mask">
+				<i class="iconfont icon-iconjia"></i>
+			</a>
+		</li>
+		<li>
+			<a href="goodplace.html">
+				<i class="iconfont icon-jishi"></i>
+				<br>
+				<span class="tab-label">带你玩</span>
+			</a>
+		</li>
+		<li>
+			<a href="me-index.html">
+				<i class="iconfont icon-wo"></i>
+				<br>
+				<span class="tab-label">我</span>
+			</a>
+		</li>
+	</ul>
+	<!--底部导航条   end-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jilu.js"></script>
+	<script src="js/recordingData.js"></script>
+
+
+	<!-- 服务器保存添加数据 -->
+	<script type="text/javascript">
+		var picUrl;
+		$('#uploadPic').change(function () {
+			console.log(this.value);
+			picUrl = this.value;
+		})
+		function add() {
+			var variety = $('#variety-input').val().trim()
+			if (variety) {
+				var data = {}
+				data.user = {}
+				data.num = sessionStorage.num
+				data.type = sessionStorage.type
+				data.user.user = sessionStorage.user
+				data.user.type = {}
+				data.user.type[variety] = {}
+				data.user.type[variety].record = [[]]
+				data.user.type[variety].record[0][0] = {}
+				data.user.type[variety].record[0][0].date = nowDate()
+				data.user.type[variety].record[0][0].weather = $('#weather-tips').text().trim()
+				data.user.type[variety].record[0][0].color = $('#leaves-tips').text().trim()
+				data.user.type[variety].record[0][0].water = $('#water-tips').text().trim()
+				data.user.type[variety].record[0][0].fer = $('#fer-tips').text().trim()
+				data.user.type[variety].record[0][0].soil = $('.turn').is('.fr')
+				data.user.type[variety].record[0][0].picUrl = picUrl;
+				console.log(data)
+				$.post('http://localhost:3000/api/v1/type_num/jilu', data, function (data) {
+					if (data.logo == 'success-新增成功') {
+						location.href = 'addVarietys.html';
+					} else {
+						alert('新增失败')
+					}
+				})
+			} else {
+				alert('添加品种为填写')
+			}
+
+
+		}
+
+		function nowDate() {
+			var date = new Date()
+			var y = date.getFullYear();
+			var m = date.getMonth() + 1;
+			m = m < 10 ? '0' + m : m;
+			var d = date.getDate();
+			d = d < 10 ? ('0' + d) : d;
+			return y + '-' + m + '-' + d;
+		};
+
+
+		$('#variety-input').val(sessionStorage.type)
+		$('.nowDateT').css('color', '#FFFFFF')
+		$('.nowDateT').css('background', '#88CB84')
+		$('.nowDateT').addClass('dateT')
+
+
+
+
+
+
+	</script>
+</body>
+
+</html>

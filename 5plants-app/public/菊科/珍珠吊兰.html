@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>菊科-珍珠吊兰</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>珍珠吊兰</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/珍珠吊兰.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>珍珠吊兰</h2>
+                <p>拉丁名 Senecio rowleyanus</p>
+            </div>
+            <div class="swiper-slide">
+                <p>菊科</p>
+                <p>千里光属</p>
+                <p>原产非洲南部，在世界各地广为栽培。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    一粒粒圆润的、肥厚的圆心形叶片，似一串串风铃在风中摇曳，这就是它的叶子。因叶互生，生长较疏，圆
+                    心形，深绿色，肥厚多汁，似珠子，故有“佛串珠”、“佛珠"、”绿葡萄“、”绿之铃“之美称。还有人称它为”佛珠吊兰“、”情人泪"。
+                    它的茎纤细，头状花序，顶生，长3～4厘米，呈弯钩形，花白色或褐色，花蕾是红色的细条。其性喜温暖湿润、半阴的环境。它适应性强，较耐旱、耐寒。喜富含有机质的、疏松肥沃的土壤。
+                    在温暖、空气湿度较大、强散射光的环境下生长最佳。可扦插繁殖。
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/菊科/千里光属/珍珠吊兰.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/菊科/千里光属/珍珠吊兰.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/菊科/千里光属/珍珠吊兰.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../juke6.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

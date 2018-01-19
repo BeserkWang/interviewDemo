@@ -1,0 +1,236 @@
+html,body,div {
+    margin: 0;
+    padding: 0;
+}
+.bg {
+    width: 500px;
+    height: 500px;
+    background-color: gainsboro;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+}
+.bg-circle {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(80, 147, 156);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -450px;
+    left: 50px;
+    overflow: hidden;
+}
+.left-shadow {
+    width: 350px;
+    height: 100px;
+    background-color: rgb(131, 137, 138);
+    opacity: 0.7;
+    transform-origin: right top;
+    transform: rotate(0deg);
+    position: absolute;
+    top: 189px;
+    left: -450px;
+    z-index: 1000;
+
+}
+.right-shadow {
+    width: 400px;
+    height: 150px;
+    background-color: rgb(146, 187, 192);
+    opacity: 0.6;
+    position: absolute;
+    top: 135px;
+    left: 20px;
+    transform: rotate(-90deg);
+    transform-origin: right top;
+}
+.bg-face {
+    width: 160px;
+    height: 200px;
+    background-color: rgb(253, 232, 173);
+    border-radius: 50px;
+    position: absolute;
+    bottom: -400px;
+    left: 120px;
+    z-index: 950;
+
+}
+.body {
+    width: 250px;
+    height: 300px;
+    background-color: #000;
+    border-radius:80px;
+    position: absolute;
+    bottom: -400px;
+    left: 75px;
+    z-index: 900;
+}
+.hair {
+    width: 200px;
+    height: 0px;
+    background-color: rgb(233, 190, 74);
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    border-radius: 20px;
+    z-index: 960;
+    overflow: hidden;
+}
+.face {
+    width: 140px;
+    height: 180px;
+    background-color: rgb(253, 232, 173);
+    border-radius: 50px;
+    position: absolute;
+    top: 100px;
+    left: 130px;
+    z-index: 970;
+   
+}
+.left-ear {
+    width: 25px;
+    height: 35px;
+    background-color: rgb(253, 232, 173);
+    position: absolute;
+    top: 75px;
+}
+.right-ear {
+    width: 25px;
+    height: 35px;
+    background-color: rgb(253, 232, 173);
+    position: absolute;
+    top: 75px;
+    left: 175px;
+}
+.hair-little {
+    width: 40px;
+    height: 0px;
+    /* border-top-left-radius: 12px; */
+    border-bottom-left-radius: 20px;
+    background-color: rgb(233, 190, 74);
+    position: absolute;
+    top: -10px;
+    left: 45px;
+}
+.left-eye {
+    width: 30px;
+    height: 30px;
+    /* border-radius: 15px; */
+    background-color: rgb(17, 63, 82);
+    position: absolute;
+    top:51px;
+    left: 23px;
+}
+.right-eye {
+    width: 30px;
+    height: 30px;
+    /* border-radius: 15px; */
+    background-color: rgb(17, 63, 82);
+    position: absolute;
+    top:51px;
+    right: 23px;
+}
+.mouth {
+    width: 0px;
+    height: px;
+    background-color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    left: 55px;
+    bottom: 30px;
+    position: absolute;
+}
+.nose-shadow {
+    width: 65px;
+    height: 185px;
+    background-color: rgb(192, 192, 192);
+    border-radius: 50px;
+    position: absolute;
+    top: -10px;
+    left: 1px;
+    opacity: 0;
+}
+.nose {
+    width: 20px;
+    height: 25px;
+    background-color: rgb(253, 232, 173);
+    position: absolute;
+    top: 80px;
+    left: 50px; 
+    border-top-left-radius: 10px;
+}
+.word {
+    position: absolute;;
+    top: 46px;
+    left: 50px;
+}
+span {
+    color: #fff;
+    font-size: 50px;
+    
+}
+.word span {
+    position: absolute;
+    top: 400px;
+}
+.L {
+    color: red;
+    left: 20px;
+    /* top: 0; */
+}
+.I {
+    
+    top: 400px;
+}
+.C {
+    left: 60px;
+}
+.S {
+    left: 95px;
+}
+.SS {
+    left: 120px;
+}
+.music-note {
+    font-size: 128px;
+    color: rgb(236, 173, 65);
+    position: absolute;
+    bottom: 20px;
+   
+   
+}
+#one{
+    opacity: 0;
+}
+#two{
+    opacity: 0;
+    bottom: 100px;
+    right: 65px;
+    transform: rotate(15deg);
+}
+.bg-circled {
+    border-radius: 50%;
+    border: 1px solid orange;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    opacity: 0;
+}
+.one {
+    border: 4px solid orange;
+    
+}
+.two {
+    border: 6px solid orange;
+    
+}
+.three {
+     border: 8px solid orange;
+    
+}
+.four {
+    border: 1px solid orange;
+    
+}

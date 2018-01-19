@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>番杏科-五十铃玉</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>五十铃玉</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/五十铃玉.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>五十铃玉</h2>
+                <p>拉丁名 Fenestraria rhopalophylla subsp</p>
+            </div>
+            <div class="swiper-slide">
+                <p>番杏科</p>
+                <p>窗玉属</p>
+                <p>分布于南非沿海地区及开普省、纳马夸兰和纳米比亚的吕德里茨，开普省较集中。世界多地有栽培。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    多年生肉质草本植物，植株密生成丛，株高5厘米，株幅30厘米。茎极短或无茎，根部与叶基部连接处木质化。
+                    叶高度肉质，对生，长2-3厘米，棍棒状，顶端增粗呈浑圆状，淡绿色至灰绿色，基部稍呈红色，叶上半部分有极小的透明斑点，覆有蜡质保护层；叶顶端透明，微凸，称作“视窗”，用于接受阳光。
+                    喜温暖干燥、阳光充足的环境。耐高温干旱或半阴，不耐寒。怕水湿、阴暗及强光暴晒。土壤宜为疏松、排水性良好、颗粒偏多的沙壤土。夏季或冬季温度过低时休眠。生长适温为18℃-24℃，冬季生长温度不低于12℃
+
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/番杏科/棒叶花属/五十铃玉.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/番杏科/棒叶花属/五十铃玉.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/番杏科/棒叶花属/五十铃玉.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../fanxingke3.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>马齿觅科-雅乐之舞</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>雅乐之舞</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/雅乐之舞.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>雅乐之舞</h2>
+                <p>拉丁名 Pailulacaria afra var.foliis-variegatis</p>
+            </div>
+            <div class="swiper-slide">
+                <p>马齿觅科</p>
+                <p>马齿苋属</p>
+                <p>广布于世界温带和热带地区。
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    株高3~4米，老茎紫褐色，嫩枝紫红色，分枝近水平，肉质叶对生， 绿色，倒卵形。雅乐之舞植株较矮，枝条也较为细弱，肉质茎红褐色（新茎）或灰白色（老茎）：
+                    肉质叶交互对生，新叶的边缘有粉红色晕，以后随着叶片的长大，红晕逐渐后缩，最后在叶缘变成一条粉红色细线，直到完全消失。
+                    叶片大部分为黄白色，只有中央的一小部分为淡绿色；小花淡粉色，观赏价值不高。喜阳光充足和温暖、干燥，通风较好的环境。耐干旱，忌阴湿和寒冷。
+                    雅乐之舞的繁殖常用扦插或嫁接的方法。
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/马齿觅科/马齿觅属/雅乐之舞.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/马齿觅科/马齿觅属/雅乐之舞.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/马齿觅科/马齿觅属/雅乐之舞.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            //按钮返回事件
+            var goBack = document.querySelector('.go-back');
+            goBack.onclick = function () {
+                window.location.href = '../mazhimike7.html'
+            }
+            var mySwiper = new Swiper('.swiper-container', {
+                direction: 'vertical',
+                // loop: true,
+                // 如果需要滚动条
+                hashnav: true,
+                scrollbar: '.swiper-scrollbar',
+            })
+        }
+    </script>
+</body>
+
+</html>

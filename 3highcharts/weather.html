@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>weather</title>
+    <script src="js/address.js"></script>
+    <script src="js/city.js"></script>
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="js/highcharts.js"></script>
+</head>
+<body>
+    <select name="selProvince" id="selProvince" onchange="selProvinceChanged(event)"></select>
+    <select name="selCity" id="selCity" onchange="selCityChanged(event)"></select>
+    <select name="selArea" id="selArea" onchange="cityName(event)"></select>
+    <div id="container">
+
+    </div>
+    <script>
+        var selProvince = document.getElementById('selProvince');
+        var selCity = document.getElementById('selCity');
+        var selArea = document.getElementById('selArea');
+
+        selProvince.innerHTML = `<option>请选择</option>`;
+        selCity.innerHTML = `<option>请选择</option>`;
+        selArea.innerHTML = `<option>请选择</option>`;
+        
+        arrProvince.forEach(function(e) {
+            selProvince.innerHTML += `<option value="${e.ProID}">${e.name}</option>`;
+        });
+
+        function selProvinceChanged(e) {
+            selCity.innerHTML = `<option>请选择</option>`;
+            arrCity.forEach(function(item) {
+                if(selProvince.value == item.ProID) {
+                    selCity.innerHTML += `<option value="${item.CityID}">${item.name}</option>`;
+                }
+            });
+        }
+
+
+        function selCityChanged(e) {
+            selArea.innerHTML = `<option>请选择</option>`;
+            arrArea.forEach(function(area) {
+                if(selCity.value == area.CityID) {
+                    selArea.innerHTML += `<option value="${area.Id}">${area.DisName}</option>`;
+                }
+               
+            });
+           
+        }
+
+        var  citycode;
+        function cityName(e) {
+           
+            var city = arrArea.find(function(item) {
+                if(selArea.value == item.Id) {
+                    return item;
+                }
+            });
+           
+            City.forEach(function(item) {
+                if(city.DisName == item.city) {
+                    citycode = item.adcode;
+                }
+            })
+            console.log(citycode);
+
+
+            $.ajax({
+
+            type:'GET',
+            url:'http://restapi.amap.com/v3/weather/weatherInfo?key=19b1955b37ebeb893c4687735e7158ef&city='+ citycode +'&extensions=all',
+            success:function(data,status,xhr) {
+                var arr = [];
+                console.log(data);
+                data.forecasts[0].casts.filter(function(item) {
+                   arr.push(item);
+                   
+                });
+                $('#container').highcharts({
+                    title:{
+                        text:`${city.DisName}气温`,
+                        x:-20
+                    },
+                    subtitle:{
+                        text:'高德地图',
+                        x:-20
+                    },
+                    xAxis:{
+                        categories:[arr[0].date,arr[1].date,arr[2].date,arr[3].date]
+                    },
+                    yAxis:{
+                        title:{
+                        text:'Temperature(°C)'
+                        }
+                    },
+                    plotLine: [{
+                        //定义在哪个上面的值显示的标示线
+                        value:0,
+                        width:1,
+                        color:'#808080'
+                    }], 
+                    legend:{
+                        //图例内容布局方式，有水平布局及垂直布局可选，对应的配置值是： “horizontal”， “vertical”
+                        layout:'vertical',
+                        // 图例在图表中的对齐方式，有 “left”, "center", "right" 可选
+                        align:'right',
+                        verticalAlign:'middle',
+                        borderWidth:0 //边框宽度
+                    },
+                    //数据列表
+                    series:[{
+                        data:[JSON.parse(arr[0].daytemp),JSON.parse(arr[1].daytemp),JSON.parse(arr[2].daytemp),JSON.parse(arr[3].daytemp)]
+                    }],
+                });
+                
+                
+            },
+            
+            complete:function(xhr,str){
+                console.log('本次请求完成');
+            }
+        })
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>发布帖子</title>
+	<script src="js/flexible.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/public.css" />
+	<link rel="stylesheet" type="text/css" href="css/addContent.css" />
+	<link rel="stylesheet" href="css/Mask.css">
+</head>
+
+<body>
+	<header>
+		<h3>发布帖子</h3>
+	</header>
+	<div class="container">
+		<textarea id="addcontent" cols="30" rows="10" placeholder="说点什么吧。。。"></textarea>
+		<div class="uploadpic">
+			<!-- <img src="" onerror="this.src='/img/add.jpg'" alt=""  style="width:150px;height:150px;"> -->
+			<img id="news_img" src="./img/add.png" alt="" style="width:150px;height:150px;">
+			<form method="post" enctype="multipart/form-data">
+				<input type="file" id="uploadA" accept="png/jpg">
+			</form>
+		</div>
+		<a href="#">
+			<button class="red">发布</button>
+		</a>
+	</div>
+
+	<!-- 模态框 提醒未浇水时候出现的模态框 开始-->
+	<div class="ErrorTipsBox animated">
+	</div>
+	<div class="errorBox animated">
+		<div class="close fr">X</div>
+		<div class="clearfloat"></div>
+		<hr>
+		<p class="ErrorTips"></p>
+	</div>
+	<!-- 模态框 提醒未浇水时候出现的模态框 结束-->
+
+
+	<script src="js/jquery-1.11.0.js"></script>
+
+	<script src="js/addContent.js"></script>
+</body>
+
+
+</html>

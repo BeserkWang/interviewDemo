@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百合科-姬玉露</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>姬玉露</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/姬玉露.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>姬玉露</h2>
+                <p>拉丁名 Haworthia cooperi var</p>
+            </div>
+            <div class="swiper-slide">
+                <p>百合科</p>
+                <p>十二卷属</p>
+                <p>原产于南部非洲，以开普省及东伦敦为核心分布区。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    多年生草本植物。植株无茎，初为单生，后逐渐呈群生状；单生株高3-4厘米，株幅最大约7.5厘米；每株单生有22-25枚叶片，呈紧凑莲座状排列。
+                    叶高度肉质，肥厚柔软，两侧圆凸，舟形，先端肥大呈圆头状；叶翠绿色，顶端呈透明或半透明状，俗称“窗”，其表面有蓝绿色线状脉纹，叶尖有细小的丝状须。
+                    总状花序，小花白色，有绿色纵条纹。喜凉爽的半阴环境，主要生长期在较为凉爽的春秋季节，要求有一定的
+                    空气湿度，耐干旱，不耐寒，忌高温潮湿和烈日暴晒，怕阴蔽，怕土壤积水潮湿。植物夏季开花。
+                    姬玉露的为减少水分丧失，植物体会将自身埋入地下，阳光通过窗状叶端进入，深入叶片内部。用于地下进行光合作用。
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/百合科/十二卷属/姬玉露.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/百合科/十二卷属/姬玉露.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/百合科/十二卷属/姬玉露.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../baiheke1.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            // hashnav:true,
+            // scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

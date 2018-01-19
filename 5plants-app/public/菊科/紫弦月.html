@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>菊科-紫弦月</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>紫弦月</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/紫弦月.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>紫弦月</h2>
+                <p>拉丁名 Othonna capensis</p>
+            </div>
+            <div class="swiper-slide">
+                <p>菊科</p>
+                <p>千里光属</p>
+                <p>原产南非、纳米比亚，在世界各地广为栽培。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    通常是绿色，日照充足时会呈现出紫色，因此得名。
+                    可以通过扦插或是叶插的方式繁殖，生长速度快，生长期需要大量的水分,是多肉植物的吊兰品种之一，叶片非常奇特，
+                    日照充分的情况下茎部会从绿色变为紫红色。开黄色小花，搭配自身的紫红色非常漂亮。几乎没有休眠季节，但夏季高温时应该减少浇水量。
+                    如果缺水，叶片会起褶皱，浇水之后第二天就会饱满起来。初期生根需求水分不多，根系生长健壮后就会疯了一样呈爆发性生长。
+                    在各种垂吊型多肉植物中应该是生长速度较快的了。
+                    繁殖方式为叶插或扦插。
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/菊科/千里光属/紫弦月.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/菊科/千里光属/紫弦月.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/菊科/千里光属/紫弦月.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../juke6.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

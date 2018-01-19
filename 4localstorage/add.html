@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>增加文章页面</title>
+</head>
+<body>
+    <div id="container">
+        <ul>
+            <li>标题
+                <input type="text" id="title" name="title">
+            </li>
+            <li>分类
+                <input type="text" id="sort" name="sort">
+            </li>
+            <li>简介
+                <textarea name="content" id="content" cols="30" rows="10"></textarea>
+            </li>
+        </ul>
+        <input type="button" onclick="saveData()" value="save">
+    </div>
+    <script src="js/add.js"></script>
+</body>
+</html>

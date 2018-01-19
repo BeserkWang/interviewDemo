@@ -1,0 +1,62 @@
+/* 返回按钮 */
+.go-back {
+    font-size: 0.3867rem;
+    color: #eeeeee;
+    position: relative;
+    top: -0.1333rem;
+}
+/* 搜索框的样式 */
+.search {
+    width: 100%;
+    height: 0.4533rem;
+    /* border: 1px solid #88cb84; */
+    border-radius: 0.2rem;
+}
+.searchPlant {
+    width: 85%;
+    height: 0.9093rem;
+    background-color: rgb(224, 247, 226);
+    border: none; 
+    text-align: center;
+    color: rgb(192, 192, 192);
+}
+button {
+    border: none;
+    background-color: rgb(210, 247, 213);
+    width: 15%;
+    height:0.9066667rem;
+    margin-top: 1px;
+}
+button i {
+    color: rgb(143, 131, 131);
+}
+/* 图鉴部分的css样式 */
+.container {
+    background-color: #d7e9d6;
+    overflow-y: scroll;
+    width: 100%;
+    height:14.6866666667rem;
+    
+}
+.my-guide {
+    width: 100%;
+    height:14.6766666667rem;
+    display: block;
+   
+}
+.my-guide-plant {
+    width: 2.66666666667rem;
+    height: 2.66666666667rem;
+    /* border: 1px solid #333; */
+    margin: 1.0666666667rem 0.186666667rem 0.26666666667rem 0.34666666667rem;
+    text-align: center;
+    float: left;
+}
+.my-guide-plant img {
+    width: 2.9333333333rem;
+    height: 2.9333333333rem;
+    
+}
+.my-guide-plant h3 {
+    color: #333;
+}

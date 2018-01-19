@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>景天科-乙女心</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>乙女心</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/乙女心.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>乙女心</h2>
+                <p>拉丁名 Sedum pachyphyllum Rose</p>
+            </div>
+            <div class="swiper-slide">
+                <p>景天科</p>
+                <p>景天属</p>
+                <p>原产墨西哥瓦哈卡州,世界多地有栽培。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    叶片密集排列在枝干的顶端。叶片肥厚，叶色翠绿至粉红，新叶色浅、老叶色深，长圆型的叶片靠近枝干处仔细观察会发现叶片与叶片尖成棱形，
+                    有淡淡的棱，新叶叶尖可以看到浅浅的棱，老叶会慢慢变的圆润。强光与昼夜温差大或冬季低温期叶色慢慢变红，叶片微粉红至深红。
+                    弱光则叶色浅绿或墨绿，叶片拉长。叶片上覆有细微白粉，老叶白粉掉落後呈光滑状。耐干旱，较喜肥，喜光。扦插与叶插都可以，全年都可以进行。
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/景天科/景天属/乙女心.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/景天科/景天属/乙女心.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/景天科/景天属/乙女心.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../jingtianke4.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

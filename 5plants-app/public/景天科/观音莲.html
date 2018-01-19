@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>景天科-观音莲</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>观音莲</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/观音莲.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>观音莲</h2>
+                <p>拉丁名 Sempervivum tectorum</p>
+            </div>
+            <div class="swiper-slide">
+                <p>景天科</p>
+                <p>长生草属</p>
+                <p>原产于西班牙、法国、意大利等欧洲国家的山区。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    观音莲肉如其名，叶片莲座状环生，其株形端庄，犹如一朵盛开的
+                    莲花。叶片扁平细长，叶端渐尖，叶缘有小绒毛，充分光照下，叶端形成非常漂亮咖啡色或紫红色；若光照不充足，则叶端只为深绿色。
+                    喜温湿润、半阴的生长环境，生长适温为20-30℃，越冬温度为15℃。
+                    观音莲繁殖方式有扦插、分株。主要靠分株，将叶片中间生长的新枝剪掉，单独扦插在土壤中即可，也可叶插繁殖。
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/景天科/长生草属/观音莲.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/景天科/长生草属/观音莲.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/景天科/长生草属/观音莲.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../jingtianke4.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

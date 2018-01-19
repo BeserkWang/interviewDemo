@@ -1,0 +1,97 @@
+.header .fl{
+    color: #eeee;
+    font-size: 0.3867rem;
+    position: relative;
+    top:-0.133333rem;
+}
+.wrap {
+    overflow-x: hidden;
+    width: 100%;
+    height: 16rem;
+}
+.container {
+    width: 105%;
+    height: 16rem;
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+    background-color: #ebf3ea;
+    padding-bottom: 1.3333333rem;
+    padding-right: 0.4rem;
+   
+
+}
+/* 卡片 是a标签 */
+.card {
+    display: block;
+    width: 90%;
+    height: auto;
+    background-color: rgb(243, 248, 240);
+    margin: 0.5333333rem auto;
+    box-shadow: 0.2666666667rem 0.2666666667rem 0.13333333rem #eef0ea; 
+    padding-top: 0.00667rem;
+    padding-bottom: 0.1333rem;
+}
+.card .username {
+    margin-top: 0.533333rem;
+    margin-left: 0.533333rem;
+    font-size: 0.433333rem;
+    color: rgb(99, 98, 98);
+}
+.card .user-content {
+    margin-top:0.06666667rem;
+    margin-left: 0.533333rem;
+    font-size: 0.333333rem;
+    color: rgb(56, 53, 53);
+}
+.card .user-pic {
+    margin-top: 0.1333333rem;
+    margin-left: 0.533333rem;
+}
+.card .user-pic img {
+    width:1.33333333333rem;
+    height: 1.33333333333rem;
+    float: left;
+    margin-left: 0.13333333rem;
+  
+}
+.card .time {
+    margin-top:  0.13333333rem;
+    margin-left: 0.533333rem;
+    font-size:0.32rem;
+    color: rgb(206, 206, 206);
+
+}
+.card .comment {
+    margin-left: 15px;
+    margin-top: 0.26666667rem;
+
+}
+.card .comment .comment-btn {
+    color: rgb(33, 66, 48);
+}
+.card .comment .like {
+   
+}
+.card .comment .like .icon-xing {
+    color: rgb(49, 167, 173);
+    margin-right: 0.13333333rem;
+}
+.comments {
+    display: block;
+    width: 200px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.btn-sure {
+    border: 1px solid #fff;
+    height: 25px;
+    margin-top: 10px;
+    color: #88cb84;
+}
+/* 添加的评论 */
+.comment-show {
+    padding-left: 20px;
+    margin-top: 5px;
+    color: #3a3737;
+}

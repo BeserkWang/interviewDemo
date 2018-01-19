@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>马齿觅科-吹雪之松锦</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>吹雪之松锦</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/吹雪之松锦.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>吹雪之松锦</h2>
+                <p>拉丁名 Anacampseros telephiastrum Sunset</p>
+            </div>
+            <div class="swiper-slide">
+                <p>马齿觅科</p>
+                <p>回欢草属</p>
+                <p>原产地为纳米比亚。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    顶端叶片似莲花展开，叶面厚实，五彩雍华。作为观赏植物，适宜用小盆栽种，
+                    陈设于窗台、案头、书桌、阳台等处，闲暇之时细细观赏其独特的株型、叶片，从中领悟大自然之神奇，植物之妙趣。
+                    吹雪之松锦繁殖可以用种子播种或侧枝，取下健康的侧枝，晾干伤口扦插在松软的植料里，
+                    少量喷雾，很容易就长新根了。长根后就可以慢慢正常管理了。
+                    浇水也是干透浇透，长的倒不慢。春天和秋天可以全日照，夏天要注意遮阳，不晒伤就可以，夏季它们不休眠，反正一直是给水的。
+                    夏天也是它们的花期，开漂亮的粉红色花，能够自花结果。种子有白色胞衣，很轻，花友注意收获的时候不要飞了。
+                    冬天零下3度就要保持盆土干燥，0度以上可以适当给点水，相比其他植物，耐冻性能还是可以的。
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/马齿觅科/回欢草属/吹雪之松锦.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/马齿觅科/回欢草属/吹雪之松锦.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/马齿觅科/回欢草属/吹雪之松锦.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            //按钮返回事件
+            var goBack = document.querySelector('.go-back');
+            goBack.onclick = function () {
+                window.location.href = '../mazhimike7.html'
+            }
+            var mySwiper = new Swiper('.swiper-container', {
+                direction: 'vertical',
+                // loop: true,
+                // 如果需要滚动条
+                hashnav: true,
+                scrollbar: '.swiper-scrollbar',
+            })
+        }
+    </script>
+</body>
+
+</html>

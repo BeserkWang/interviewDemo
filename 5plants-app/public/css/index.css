@@ -1,0 +1,191 @@
+/*头部部分*/
+.header {
+	padding: 0.5333333rem 0 2.66666666667rem;
+	/*background-color: transparent;*/
+}
+/*轮播图部分*/
+
+.sliders {
+	width: 100%;
+	height: 4.4rem;
+	position: absolute;
+	top: -2.093333333rem;
+	/*overflow: hidden;*/
+	
+}
+.sliders .slider {
+	width: 80rem;
+	height: 4.4rem;
+	
+}
+.sliders .slider .slider-img {
+	width: 10rem;
+	height: 4.4rem;
+	border-radius: 0.133333333rem;
+	float: left;
+	padding: 0 0.533333333rem;
+
+}
+.sliders .slider .slider-img img {
+	width: 100%;
+	height: 4.4rem;
+	border-radius: 0.13333333rem;
+}
+.empty-height {
+	width: 100%;
+	height: 3.4rem;
+}
+/*图鉴部分*/
+.icon {
+	width: 2.5em;
+    height: 2.5em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+	/*自定义部分*/
+	/*border: 2px solid #d8a1a1;*/
+	border-radius: 50%;
+	padding: 0.0666666667rem;
+	background-color: #88cb84;
+ }
+ 
+ .index-icons {
+ 	width: 100%;
+ 	padding: 0.2rem;
+ 	/*position: absolute;*/
+ 	margin-top: -0.6rem;
+ 	margin-bottom: 0.26666667rem;
+ }
+ .icons {
+ 	width: 100%;
+ 	padding-left: 0.4rem;
+
+ }
+.icons a {
+	display: inline-block;
+	width: 18%;
+	text-align: center;
+	color: #fff;
+}
+
+.icons a section {
+	color: #666;
+}
+
+/*说说部分*/
+.talking {
+	width: 100%;
+	/*height: calc(100% - 653px);*/
+	height: 7.899rem;
+	/*height: 8rem;*/
+	padding: 0.26666666667rem 0.4rem;
+	background-color: #f5f7f2;
+	/*position: absolute;
+	top: 5.533333333rem;*/
+	overflow-y: scroll;
+
+	
+}
+.talking a {
+	width: 100%;
+	height: 3.33333333rem;
+	display: block;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin-bottom: 0.266666667rem;
+}
+.talking .a-1 {
+	background-image: url(../img/talking7.png);
+}
+.talking .a-2 {
+	background-image: url(../img/talking1.jpg);
+}
+
+.talking .a-3 {
+	
+	background-image: url(../img/talking4.jpg);
+}
+/*遮罩层*/
+#mask {
+
+    z-index: 1000;
+    width: 100%;
+    height:100%;
+    background-color: #fff;
+    opacity: 0.7;
+    display: none;  
+    top: 0;
+    position: absolute;       
+}
+#mask .mask {
+	margin-top: 11.106666666667rem;
+}
+#mask .mask a {
+	display: inline-block;
+	width: 30%;
+	height: 2rem;
+	margin-left: 0.2rem;
+	text-align: center;
+	font-size: 0.42666666667rem;
+	border: 0.0133333333rem solid #0d5302;
+	padding-top: 0.133333333rem;
+	color: #056f00;
+}
+#mask .mask a i {
+	width: 1rem;
+	height: 1rem;
+	display: block;
+	line-height: 1rem;
+	border: 0.02666666667rem solid #056F00;
+	border-radius: 50%;
+	font-size: 0.56rem;
+	margin:0 auto;
+	
+}
+#mask .mask a b {
+	position: relative;
+	top: 0.13333333rem;
+	color: #259b24;
+}
+
+
+body {
+	overflow-x: hidden;
+}
+/*遮罩层日期部分*/
+#mask .tips {
+	position: relative;
+	top: 0.666666667rem;
+	left: 0.666666667rem;
+	width: 6.666666666667rem;
+	/*border: 1px solid #333;*/
+}
+#mask .tips .date {
+	width: 3.3333333333rem;
+	height:1.333333rem;
+	/*border: 1px solid #333;*/
+	
+}
+#mask .tips .date .dating {
+	font-size: 1.066666666667rem;
+}
+#mask .tips .date .dates {
+	font-size: 0.4rem;
+	margin-top: 0.16rem;
+
+}
+#mask .tips .weather {
+	margin-top: 0.266666667rem;
+	font-size: 0.373333333rem;
+	margin-left: 0.666666667rem;
+}
+.weather .district {
+	margin-right: 0.266666667rem;
+}
+.Indexclose {
+	position: absolute;
+	top: 0.66666666666667rem;
+	right: 0.4rem;
+	/* font-weight: bold; */
+	font-size: 0.66666666666667rem;
+}

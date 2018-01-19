@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>查看多肉</title>
+    <script src="js/flexible.js"></script>
+    <script src="js/iconfont.js"></script>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+    <link rel="stylesheet" href="css/watching.css">
+    <link rel="stylesheet" href="css/middle-tab.css">
+    <link rel="stylesheet" type="text/css" href="css/Mask.css" />
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>养护</h3>
+        <a href="./addVarietys.html" class="fl">返回</a>
+    </header>
+    <!-- 头部  end -->
+
+    <div class="wrap">
+        <!-- 多肉列表 -->
+        <div class="number-list">
+            <h2>我的肉肉</h2>
+            <ul class="list-1 type">
+                <h3 id="type"></h3>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- 此处填充服务器返回的数据  start -->
+    <div class="watching-wrap">
+        <h2>肉肉详情</h2>
+        <ul id="details">
+
+        </ul>
+    </div>
+    <!-- 此处填充服务器返回的数据  end -->
+
+
+    </div>
+    <!--底部导航条-->
+    <ul class="tab">
+        <li>
+            <a href="index.html">
+                <i class="iconfont icon-bangbangtang"></i>
+                <br>
+                <span class="tab-label firstTab">肉圈</span>
+            </a>
+        </li>
+        <li>
+            <a href="addVarietys.html">
+                <i class="iconfont icon-zhiwu active"></i>
+                <br>
+                <span class="tab-label  active">养护</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html#mask">
+                <i class="iconfont icon-iconjia"></i>
+            </a>
+        </li>
+        <li>
+            <a href="goodplace.html">
+                <i class="iconfont icon-jishi"></i>
+                <br>
+                <span class="tab-label">带你玩</span>
+            </a>
+        </li>
+        <li>
+            <a href="me-index.html">
+                <i class="iconfont icon-wo"></i>
+                <br>
+                <span class="tab-label">我</span>
+            </a>
+        </li>
+    </ul>
+    <!--底部导航条   end-->
+
+    <!-- 模态框 提醒未浇水时候出现的模态框 开始-->
+    <div class="ErrorTipsBox animated">
+    </div>
+    <div class="errorBox animated">
+        <div class="close fr">X</div>
+        <div class="clearfloat"></div>
+        <hr>
+        <p class="ErrorTips"></p>
+    </div>
+    <!-- 模态框 提醒未浇水时候出现的模态框 结束-->
+
+
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $.get('/api/v1/type/' + sessionStorage.id, function (data) {
+            var str = ``
+            if (data.logo == 'success') {
+                $('#type').text(sessionStorage.type)
+                console.log(data.data[0].type[sessionStorage.type].record)
+                data.data[0].type[sessionStorage.type].record.forEach(function (items, i) {
+                    items.forEach(function (item, index) {
+                        if (index == 0) {
+                            var day = Math.floor((new Date() - new Date(item.date)) / 86400000) +
+                                1
+                            str +=
+                                `<li>
+                    <span class="list-name">${sessionStorage.type}-${i + 1}</span>
+                    <a href="jilu.html" onclick="sessionStorage.num=${i}" class="fr recording">记录</a>
+                    <span class="list-days fr">已经养育
+                        <a href="#" onclick="details(${i})">${day}</a> 天</span>
+                </li>`
+                        }
+                    })
+                })
+                $('.type').append(str)
+            } else {
+                alert('服务器请求错误')
+            }
+        })
+
+        function details(num) {
+            $.get('/api/v1/type/' + sessionStorage.id, function (data) {
+                var str = ``;
+
+                if (data.logo == 'success') {
+                    $('#type').text(sessionStorage.type);
+                    var dateArr = [];
+                    data.data[0].type[sessionStorage.type].record.forEach(function (items, index) {
+                        if (index == num) {
+                            items.forEach(function (item) {
+                                var day = Math.floor((new Date() - new Date(item.date)) /
+                                    86400000) + 1
+                                //--------------------   开始
+                                console.log(item.soil);
+                                if (item.soil == 'true') {
+                                    item.soil = '已松土';
+                                } else {
+                                    item.soil = '没有松土哦';
+                                }
+                                //--------------------  结束
+
+                                console.log(item.picUrl);
+                                var x = item.picUrl.replace('C:\\fakepath', '.\\img')
+                                console.log(x)
+                                str +=
+                                    `<li>
+                    <p class="dateVar">日期:${item.date}</p>
+                     <p class="soilVar">松土:${item.soil}</p>
+                      <p class="ferVar">施肥:${item.fer}</p>
+                       <p class="waterVar">浇水:${item.water}</p>
+                        <p class="colorVar">颜色:${item.color}</p>
+                     <p class="weatherVar">天气:${item.weather}</p>
+                     <img  src="${x}" class="pics fr" id="pics">
+                </li>`;
+                               
+                                    // var oFReader = new FileReader();
+                                    // var file = item.picUrl;
+                                    // console.log(file)
+                                    // oFReader.readAsDataURL(file);
+                                    // oFReader.onloadend = function (oFRevent) {
+                                    //     var src = oFRevent.target.result;
+                                    //     $('img').attr('src', src);
+                                    // }
+                                })
+                        }
+                    })
+                    // console.log(str)
+                    $('#details').html(str)
+
+
+                    //--------------------   开始
+                    //提醒浇水事件  开始
+                    var oNow = new Date();
+                    var oyear = oNow.getFullYear();
+                    var oMonth = oNow.getMonth() + 1;
+                    var lastLi = $('#details li:last p:first').text()
+                    // console.log(lastLi)
+                    var aDate = lastLi.split('-'); //["日期:2017", "11", "25"]
+                    console.log(parseInt(aDate[1]));
+                    console.log(oMonth);
+                    if (aDate[1] != oMonth) {
+                        oDateNum = mGetDate(oyear, oMonth);
+                        // console.log(oDateNum)
+                        var days = oDateNum - parseInt(aDate[2]) + oNow.getDate();
+                        console.log(days)
+                        if (days > 15) {
+                            // console.log(days + parseInt(aDate[2]))
+                            $('.ErrorTipsBox').css('display', 'block').addClass('slideInUp');
+                            $('.errorBox').css('display', 'block').addClass('zoomIn');
+                            $('.ErrorTips').text('主人该给我浇水啦');
+                        }
+                    } else {
+                        if (Math.abs(lastLi.split('-')[2] - oNow.getDate()) > 15) {
+                            $('.ErrorTipsBox').css('display', 'block').addClass('slideInUp');
+                            $('.errorBox').css('display', 'block').addClass('zoomIn');
+                            $('.ErrorTips').text('主人该给我浇水啦');
+                        }
+                    }
+
+                    //--------------------  结束
+
+                    //--------------------   开始
+                    $('img#pics').click(function () {
+                        if ($(this).hasClass('click')) {
+                            $(this).removeClass('click')
+                        } else {
+                            $(this).addClass('click');
+                        }
+                    })
+                    //--------------------   结束
+
+
+                } else {
+                    alert('服务器请求错误')
+                }
+            })
+        }
+        //--------------------  开始
+        $('.close').click(function () {
+            $('.ErrorTipsBox').removeClass('slideInUp').addClass('fadeOut').css('display', 'none');
+            $('.errorBox').removeClass('zoomIn').addClass('rotateOut').css('display', 'none');
+        })
+        //--------------------  结束
+
+        //获取一个月的总天数的代码
+        function mGetDate(year, month) {
+            var d = new Date(year, month, 0);
+            return d.getDate();
+        }
+    </script>
+</body>
+
+</html>

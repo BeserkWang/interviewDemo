@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>番杏科-姬红小松</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>姬红小松</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/姬红小松.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>姬红小松</h2>
+                <p>拉丁名 Bergeranthus.multiceps</p>
+            </div>
+            <div class="swiper-slide">
+                <p>番杏科</p>
+                <p>仙宝属</p>
+                <p>原产于南非，现世界多地可栽培。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    小型亚灌木。植株灌木状并茎基部膨大成块根状。株高15-20cm，株幅20cm。
+                    茎干肥厚多肉，多分枝，粗糙，黄褐色，顶端丛生纺锥形肉质小叶，淡绿色，长1-2cm，顶端丛生细短白毛。花顶生，雏菊状。桃红色。花期夏季。
+                    喜阳光充足、温暖干燥的环境，适宜在疏松透气、排水良好的土壤中生长。
+
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/番杏科/仙宝属/姬红小松.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/番杏科/仙宝属/姬红小松.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/番杏科/仙宝属/姬红小松.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../fanxingke3.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

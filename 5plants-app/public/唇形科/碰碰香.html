@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>唇形科-碰碰香</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>碰碰香</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/碰碰香.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>碰碰香</h2>
+                <p>拉丁名 Plectranthus hadiensis var. tomentosus</p>
+            </div>
+            <div class="swiper-slide">
+                <p>唇形科</p>
+                <p>马刺草属</p>
+                <p>原产非洲好望角，欧洲及西南亚地区。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    碰碰香多分枝，全株被有细密的白色绒毛，肉质叶交互对生，茎细瘦，小花白色。
+                    因触碰后可散发出令人舒适的香气而享有“碰碰香”的美称。又因其香味浓甜，颇似苹果香味，故又享有“苹果香”美誉。闻之令人神清气爽。
+                    喜阳光，全年可全日照培养，但也较耐阴。喜温暖，怕寒冷，冬季需要0℃以上的温度。喜疏松、排水良好的土壤，不耐水湿，过湿则易烂根致死
+                    以播种、扦插和分株多种方法繁殖
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/唇形科/香茶菜属/碰碰香.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/唇形科/香茶菜属/碰碰香.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/唇形科/香茶菜属/碰碰香.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../chunxingke2.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>景天科-熊童子白锦</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>熊童子白锦</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/熊童子白锦.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>熊童子白锦</h2>
+                <p>拉丁名 Cotyledon ladismithiensis var iegata</p>
+            </div>
+            <div class="swiper-slide">
+                <p>景天科</p>
+                <p>银波锦属</p>
+                <p>原产于纳米比亚，现世界各地均有栽培。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    植株呈多分枝的矮小灌木状，老茎深褐色，幼枝灰色，肥厚多肉的叶片交互对生，叶卵形，长2～3厘米，宽1～1.5厘米，
+                    顶部的叶缘具缺刻。叶片表面密生白色的细短绒毛，叶尖有几个小爪强光下会变红。可以剪侧枝扦插，也可以叶片繁殖。
+                    应在温暖干燥和阳光充足的环境里养护，当夏季温度超过35℃时，整个植株生长基本停滞。这个时候应减少浇水并且遮阳，
+                    防止因盆土过度潮湿引起根部腐烂。并加强通风，避免烈日曝晒，整个夏季基本这样养护，值得说明的是夏季，并非整个季节都断水，是只给微量的水，
+                    一个月大概2次，在晚上7点左右给水，这个时候太阳已经下山去了，不会对植物的根部照成影响。
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/景天科/银波锦属/熊童子白锦.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/景天科/银波锦属/熊童子白锦.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/景天科/银波锦属/熊童子白锦.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../jingtianke4.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

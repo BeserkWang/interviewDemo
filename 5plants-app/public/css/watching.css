@@ -1,0 +1,173 @@
+
+body {
+    background-color: #ebf3ea;
+}
+.index-icons {
+    margin-top:0.4267rem!important;
+}
+.header a {
+    color: #fff;
+    font-size: 0.3733rem;
+    position: relative;
+    top: -0.2rem;
+ }
+/* 多肉列表 */
+.number-list {
+    width: 90%;
+    height: 5.6667rem;
+    /* border: 1px solid #88cb84; */
+    /* margin-top: 0.5333rem; */
+    overflow-y: scroll;
+    border-left: none;
+    border-right: none;
+    padding: 0.2667rem 0.5333rem 0.2667rem 0.6667rem;
+    background-color: rgb(243, 248, 240);
+    box-shadow: 0.2666666667rem 0.2666666667rem 0.13333333rem #eef0ea; 
+    margin: 0.53333rem auto;
+}
+.number-list h2 {
+    color: #989c98;
+    margin: 0.2rem;
+    margin-left: 2.4rem;
+   
+}
+.number-list ul {
+    width: 100%;
+    height: auto;
+    /* border: 1px solid #333; */
+    margin: 0.2rem 0;
+   
+}
+.number-list ul h3 {
+    color: #666; 
+    margin-bottom: 0.1333rem; 
+    font-size: 0.4667rem;  
+}
+.number-list ul li {
+    width: 100%;
+    /* border: 1px solid #333; */
+    padding: 0 0.1333rem;
+    height: 0.6667rem;
+}
+.number-list ul li span.list-name {
+    font-size: 0.3733rem;
+    color: #b1afaf;
+}
+.number-list ul li span.list-days {
+    font-size: 0.3733rem;
+    color: #b1afaf;
+}
+.number-list ul li span.list-days a {
+    font-size: 0.4267rem;
+    color: #a8e4a3;
+    font-weight: bold;
+    font-style: italic;
+    margin-right: 0.0667rem;
+}
+.number-list ul li a.recording {
+    font-size: 0.3733rem;
+    color: #9ed698;
+    font-weight: bold;
+    margin-left: 0.1333rem;
+    margin-top: 0.04rem;
+}
+/* 显示后端返回数据的样式 */
+.watching-wrap {
+    width: 90%;
+    height: 5.6667rem;
+    /* border: 1px solid #88cb84; */
+    /* margin-top: 0.8333rem; */
+    overflow-y: scroll;
+    border-left: none;
+    border-right: none;
+    padding: 0.2667rem 0.5333rem 0.2667rem 0.6667rem;
+    background-color: rgb(243, 248, 240);
+    box-shadow: 0.2666666667rem 0.2666666667rem 0.13333333rem #eef0ea; 
+    margin: 0.83333rem auto;
+}
+
+.watching-wrap h2 {
+    color: rgb(161, 156, 156); 
+    margin-bottom: 0.1333rem; 
+    font-size: 0.4667rem; 
+    margin-left: 0.2rem; 
+}
+.dateVar {
+    font-size: 0.3733rem;
+    color: #b1afaf;
+    margin-left: 0.2rem; 
+}
+.soilVar {
+    font-size: 0.2933rem;
+    color: #88cb84;
+    margin-top: 0.0667rem;
+}
+.ferVar{
+    font-size: 0.2933rem;
+    color: #88cb84;
+    margin-top: 0.0667rem;
+}
+ .waterVar{
+    font-size: 0.2933rem;
+    color: #88cb84;
+    margin-top: 0.0667rem;
+ }
+ .colorVar{
+    font-size: 0.2933rem;
+    color: #88cb84;
+    margin-top: 0.0667rem;
+ }
+.weatherVar{
+    font-size: 0.2933rem;
+    color: #88cb84;
+    margin-top: 0.0667rem;
+}
+/* 新增数量 */
+.add-Number {
+    width: 100%;
+    height: auto;
+    border: 0.04rem solid #88cb84;
+    padding: 0.2rem;
+    margin-top: 0.58rem;
+}
+#addVarieties {
+    width: 2.6667rem;
+    height: 0.6667rem;
+    border: 1px solid #88cb84;
+    font-size: 0.36rem;
+    color: #666;
+    margin: 0.3333rem;
+}
+#addVarieties option {
+    font-size: 0.16rem!important;
+}
+input.addNum {
+    width: 2.4rem;
+    height: 0.7333rem;
+    border: 1px solid #88cb84;
+    float: none;
+    font-size: 0.32rem;
+    margin:0 0.5333rem 0 0;
+    color: #666;
+}
+.addNum-submit {
+    width: 2rem;
+    height: 0.8rem;
+    background-color: #88cb84;
+    color: #fff;
+    border-radius: 0.1333rem;
+    font-size: 0.36rem;
+    line-height: 0.8rem;
+}
+.pics {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top: -1.9867rem;
+}
+/* 点击事件的类 */
+.click {
+    width:100%;
+    height:4rem;
+    margin-top:-0.1333rem;
+}

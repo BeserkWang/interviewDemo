@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>养护-增添品种</title>
+    <script src="js/flexible.js"></script>
+    <script src="js/iconfont.js"></script>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/addVarietys.css">
+    <link rel="stylesheet" href="css/middle-tab.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>养护</h3>
+    </header>
+    <!-- 头部  end -->
+
+    <!-- 斜线部分 -->
+    <div class="line-slant"></div>
+    <!-- 斜线部分 end-->
+
+
+    <!-- 标题 -->
+    <h2 class="old-variety-title">我的多肉</h2>
+    <!-- 标题 end-->
+
+    <!-- 展示已有的品种 -->
+    <div class="old-variety">
+        <ul class="show-variety" id='show-variety'>
+            <!--<li>紫珍珠
+                <span class="fr">有&nbsp;
+                    <a href="#">5</a>&nbsp;&nbsp;株</span>
+            </li>
+            <li>白凤
+                <span class="fr">有&nbsp;
+                    <a href="#">5</a>&nbsp;&nbsp;株</span>
+            </li>
+           -->
+        </ul>
+    </div>
+    <!-- 展示已有的品种 end-->
+
+    <!-- 养护部分的tab切换 -->
+    <div class="index-icons">
+        <div class="icons">
+            <a href="recording.html">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-iconjia"></use>
+                </svg>
+                <br>
+                <section class="active">增添肉肉</section>
+            </a>
+        </div>
+    </div>
+    <!-- 养护部分的tab切换 end-->
+
+    <!--底部导航条-->
+    <ul class="tab">
+        <li>
+            <a href="index.html">
+                <i class="iconfont icon-bangbangtang"></i>
+                <br>
+                <span class="tab-label firstTab">肉圈</span>
+            </a>
+        </li>
+        <li>
+            <a href="addVarietys.html">
+                <i class="iconfont icon-zhiwu active"></i>
+                <br>
+                <span class="tab-label  active">养护</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html#mask">
+                <i class="iconfont icon-iconjia"></i>
+            </a>
+        </li>
+        <li>
+            <a href="goodplace.html">
+                <i class="iconfont icon-jishi"></i>
+                <br>
+                <span class="tab-label">带你玩</span>
+            </a>
+        </li>
+        <li>
+            <a href="me-index.html">
+                <i class="iconfont icon-wo"></i>
+                <br>
+                <span class="tab-label">我</span>
+            </a>
+        </li>
+    </ul>
+    <!--底部导航条   end-->
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <!--进入这个页面，根据登入用户调取数据-->
+    <script type="text/javascript">
+        if (!sessionStorage.user) {
+            location.href = 'login.html'
+        } else {
+            $.get('/api/v1/data_all/' + sessionStorage.user, function (data) {
+                console.log(data.type[0]._id)
+
+                if (data.type) {
+                    var str = ''
+                    for (var i in data.type[0].type) {
+                        str +=
+                            `<li>${i}
+                <span class="fr">有&nbsp;
+                    <a href='watching.html' onclick="sessionStorage.id = '${data.type[0]._id}';sessionStorage.type = '${i}'">${data.type[0].type[i].record.length}</a>&nbsp;&nbsp;株</span>
+            </li>`
+                    }
+                    $('#show-variety').html(str)
+
+                }
+
+            })
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+/* 模态框 当手机号格式不正确时出现的模态框 */
+
+.ErrorTipsBox {
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(240, 234, 234);
+    opacity: 0.6;
+    display: none;
+}
+.errorBox {
+    z-index: 1000;
+    width: 6.6667rem;
+    height: 4rem;
+    text-align: center;
+    background-color:#fff; 
+    /* margin: 400px auto; */
+    position: absolute;
+    top:5.6933rem;
+    left: 1.6933rem;
+    display: none;
+}
+.close {
+    font-size: 0.4rem;
+    color: #666;
+    padding: 0.1333rem 0.4rem 0 0;
+}
+.ErrorTips {
+    font-size: 0.3733rem;
+    color: #88cb84;
+    line-height: 2.4rem;
+    word-break: break-all;
+}

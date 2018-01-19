@@ -1,0 +1,132 @@
+/* 日历部分 */
+.calender {
+    width: 100%;
+}
+.header a {
+   color: #fff;
+   font-size: 0.3733rem;
+   position: relative;
+   top: -0.2rem;
+}
+/*recording-list列表记录条目部分的样式*/
+.recording-list {
+    width: 100%;
+    /* height: auto; */
+    /* background-color: #9fe499; */
+    position: relative;
+    top: 0.53333333rem;
+    /* opacity: 0.7; */
+}
+
+.recording-list section.rec-li {
+    width: 100%;
+    height: 0.966666666667rem;
+    border-top: 1px solid #88cb84;
+}
+.recording-list section.rec-li:nth-child(6) {
+    border-bottom: 1px solid #88cb84;
+}
+.recording-list section.rec-li div.recording-wrap {
+    font-size: 0.37333333333333rem;
+    line-height:0.86666666667rem;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto; 
+    color: #88cb84;
+    /* border: 1px solid #333; */
+}
+input.variety-input {
+    width: 2.9666666667rem;
+    height: 0.666666667rem;
+    margin-top: 0.13333333333rem;
+    /* background-color: pink; */
+    border-bottom: 1px solid #88cb84;
+    color: #88cb84;
+    display: none;
+    margin-right: 0.26666667rem;
+}
+.recoding-title i {
+    font-size:0.37333333333rem;
+    margin-right: 0.106666666667rem;
+    color: #0a7e07;
+}
+.recording-wrap i.variety-write{
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    /* 当点击图标的时候图标消失 出现下划线 */
+    position: relative;
+    font-size: 0.4rem;
+    left:6.52rem;
+}
+.recording-wrap i.repoting-camera {
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    /* 当点击相机的时候添加事件 */
+    font-size:0.566666667rem;
+    color: #88cb84;
+    margin-right: 0.8rem;
+}
+ul.level {
+    width: 4rem;
+    height: 0.66666666667rem;
+    margin-top: 0.133333333rem;
+    /* border: 1px solid #333; */
+}
+ul.level li {
+    width: 0.8rem;
+    height: 0.4rem;
+    /* background-color: #b8abab; */
+    float: left;
+    /* margin: 0 0.133333333rem; */
+    /* margin: 0 5px; */
+    margin: 0;
+    padding: 0;
+    color: #88cb84;
+    
+}
+ul.level li i {
+    font-size:0.5333333333rem;
+    line-height: 0.6666666666667rem;
+}
+/* 是否松土的开关 */
+.turn-wrap {
+    width: 0.9866666667rem;
+    height:0.566666666667rem;
+    border: 1px solid #88cb84;
+    margin-top: 0.18333333333rem;
+    border-radius:0.7333333333333rem;
+    margin-right: 0.68rem;
+    background-color: #eee;
+    
+
+}
+.turn {
+    width: 0.5667rem;
+    height: 0.5667rem;
+    border-radius: 50%;
+    background-color: #dbdbdb;
+    opacity: 0.7;
+}
+
+/* 给天气高亮显示的类 */
+ul.level li.current {
+    color: #85f177;
+}
+
+/* 出现的tips */
+#weather-tips,#leaves-tips,#water-tips,#fer-tips {
+    width: 0.7333rem;
+    height: 0.4667rem;
+    background-color: #85f177;
+    color: #fff;
+    position: relative;
+    left: -0.0933rem;
+    top: -0.7333rem;
+    z-index: 100;
+    font-size: 0.2933rem;
+    line-height: 0.4667rem;
+    text-align: center;
+    border-radius: 0.0933rem;
+    display: none;
+}
+.index-icons {
+    margin-top:0.5833rem!important;
+}

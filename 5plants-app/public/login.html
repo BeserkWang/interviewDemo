@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<script src="js/flexible.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<link rel="stylesheet" href="css/Mask.css">
+	</head>
+
+	<body>
+		<header>
+			<h3>登录</h3>
+			<a href="register.html">注册</a>
+		</header>
+		<div class="container">
+			<div class="input-bg">
+				<div class="input-group">
+					<section class="grp">
+						<div class="input-icon phone"></div>
+						<input type="text" placeholder="请输入手机号" id="loginNum">
+					</section>
+					<section class="grp">
+						<div class="input-icon pwd"></div>
+						<input type="password" placeholder="请输入密码" id="loginPwd">
+					</section>
+				</div>
+				<a href="#">
+					<button class="red" id="loginSub">登录</button>
+				</a>
+				<a href="forget_pwd.html">
+					<p style="color: #999999">忘记密码？</p>
+				</a>
+			</div>
+			<div class="line-grp">
+				<hr>
+				<span class="word2">第三方登录</span>
+			</div>
+			<div class="bit-grp">
+				<button class="weixin"></button>
+				<button class="qq"></button>
+				<button class="weibo"></button>
+			</div>
+		</div>
+		<!-- 模态框 当手机号格式不正确时出现的模态框 -->
+		<div class="ErrorTipsBox animated">
+		</div>
+		<div class="errorBox animated">
+			<div class="close fr">X</div>
+			<div class="clearfloat"></div>
+			<hr>
+			<p class="ErrorTips"></p>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/login.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>好友分享界面</title>
+    <script src="js/flexible.js"></script>
+    <script src="js/iconfont.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/public.css" />
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+    <link rel="stylesheet" href="css/share.css">
+    <script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <!-- 将记录的详情展示到界面 -->
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>我的圈子</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+    <!-- 说说部分 -->
+    <div class="wrap">
+        <div class="container">
+            <!--<div class="card">
+                <div class="username">xy</div>
+                <p class="user-content">233333333 今天的多肉长得真好看</p>
+                <div class="user-pic">
+                    <img src="img/1.jpg" alt="">
+                    <img src="img/3.jpg" alt="">
+                    <img src="img/cat.jpg" alt="">
+                    <div class="clearfloat"></div>
+                </div>
+                <p class="time">2017年11月20日</p>
+                <div class="comment">
+                    <button class="comment-btn">评论</button>
+                    <button class="like">
+                        <i class="iconfont icon-xing"></i>1
+                    </button>
+                </div>
+                <p class="comment-show"></p>
+                <div class="commenting" style="display:none;">
+                    <input type="text" class="comments">
+                    <button class="btn-sure">确定</button>
+                </div>
+            </div>-->
+
+        </div>
+    </div>
+
+
+    <!--底部导航条-->
+    <ul class="tab">
+        <li>
+            <a href="index.html">
+                <i class="iconfont icon-bangbangtang"></i>
+                <br>
+                <span class="tab-label firstTab">肉圈</span>
+            </a>
+        </li>
+        <li>
+            <a href="addVarietys.html">
+                <i class="iconfont icon-zhiwu"></i>
+                <br>
+                <span class="tab-label">养护</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html#mask">
+                <i class="iconfont icon-iconjia"></i>
+            </a>
+        </li>
+        <li>
+            <a href="goodplace.html">
+                <i class="iconfont icon-jishi"></i>
+                <br>
+                <span class="tab-label">带你玩</span>
+            </a>
+        </li>
+        <li>
+            <a href="me-index.html">
+                <i class="iconfont icon-wo"></i>
+                <br>
+                <span class="tab-label">我</span>
+            </a>
+        </li>
+    </ul>
+    <!--底部导航条   end-->
+    <!-- <script src="js/share.js"></script> -->
+    <script>
+        $('.go-back').click(function () {
+            window.location.href = 'index.html';
+        })
+        var commentPeo = [
+            '李钟硕',
+            'jasper',
+            '吴亦凡',
+            '赵丽颖',
+            '嗯哼大王',
+            'neinei',
+            'max',
+            '孔侑',
+            '小泡芙',
+        ]
+        var commentArr = [
+            '好漂亮',
+            '可以分享一下养的诀窍嘛',
+            '这个是什么品种的多肉',
+
+        ]
+        //发布详情说说
+        $.get('/api/v1/type/' + sessionStorage.id, function (data) {
+            // console.log(data);
+            var date = (new Date()).getFullYear() + '-' + ((new Date()).getMonth() + 1) + '-' + (new Date()).getDate();
+            console.log(date);
+            var str = ``;
+            if (data.logo == 'success') {
+                var types = data.data[0].type;
+                console.log(data.data[0].type);//输出了记录数据的数组
+
+                for (var type in types) {
+                    // console.log(type)  //输出品种
+                    // console.log(types[type].record) //拿到i属性中的记录值
+                    for (var i = 0; i < types[type].record.length; i++) {
+                        console.log(types[type].record[i]) //输出数据
+                        for (var j = 0; j < types[type].record[i].length; j++) {
+                            var picUrls = types[type].record[i][j].picUrl.replace('C:\\fakepath', '.\\img');
+                            console.log(parseInt(date.split('-')[2]));
+                            if (parseInt(date.split('-')[2]) != parseInt(types[type].record[i][j].date.split('-')[2])) {
+                                str = `
+                            <div class="card">
+                                <div class="username">多肉萌萌</div>
+                                <p class="user-content">这是我的第${i + 1}株${type} 哈哈哈</p>
+                                <div class="user-pic">
+                                    <img src="${picUrls}" alt="">
+                                    <div class="clearfloat"></div>
+                                </div>
+                                <p class="time">${types[type].record[i][j].date}</p>
+                                <div class="comment">
+                                    <button class="comment-btn" onclick="comment(this)">评论</button>
+                                    <button class="like">
+                                        <i class="iconfont icon-xing" onclick="dianzan(this)"></i><span class="startnum">${1 + (Math.ceil((Math.random()) * 5))}</span>
+                                    </button>
+                                </div>
+                                <p class="user-content comment-more" style="color:#3a3737;margin-top:2px;">${commentPeo[Math.floor((Math.random()) * 9)]}:${commentArr[Math.floor((Math.random()) * 3)]}</p>
+                                <div class="comment-show"></div>
+                                <div class="commenting" style="display:none;"> 
+                                    <input type="text" class="comments"> 
+                                    <button class="btn-sure" onclick="sure(this)">确定</button> 
+                                </div>
+                            </div>
+                            `
+                                // console.log(str)
+                                $('.container').append(str);
+                                //${commentPeo[Math.floor((Math.random())*9)]}:${commentArr[Math.floor((Math.random())*3)]}
+                                //${1+(Math.ceil((Math.random())*5))}
+
+                            } else {
+                                console.log(1)
+                                str = `
+                            <div class="card">
+                                <div class="username">多肉萌萌</div>
+                                <p class="user-content">这是我的第${i + 1}株${type} 哈哈哈</p>
+                                <div class="user-pic">
+                                    <img src="${picUrls}" alt="">
+                                    <div class="clearfloat"></div>
+                                </div>
+                                <p class="time">${types[type].record[i][j].date}</p>
+                                <div class="comment">
+                                    <button class="comment-btn" onclick="comment(this)">评论</button>
+                                    <button class="like">
+                                        <i class="iconfont icon-xing" onclick="dianzan(this)"></i><span class="startnum">0</span>
+                                    </button>
+                                </div>
+                                <p class="user-content comment-more" style="color:#3a3737;margin-top:2px;"></p>
+                                <div class="comment-show"></div>
+                                <div class="commenting" style="display:none;"> 
+                                    <input type="text" class="comments"> 
+                                    <button class="btn-sure" onclick="sure(this)">确定</button> 
+                                </div>
+                            </div>
+                            `
+                                $('.container').append(str);
+                            }
+
+
+                        }
+                    }
+                }
+
+            } else {
+                alert('服务器请求错误')
+            }
+        })
+
+
+        function dianzan(obj) {
+            var num = parseInt($(obj).siblings(".startnum").text()) + 1;
+            $(obj).siblings(".startnum").text(num);
+        };
+        function comment(obj) {
+            $(obj).parent().next().next().next().css('display', 'block');
+            $(obj).parent().next().next().next().children("input").get(0).value = '';
+
+        }
+        function sure(obj) {
+            var comments = $(obj).siblings(".comments").val();
+            $(obj).parent().parents('.commenting').css('display', 'none');
+            $(obj).parent().siblings('.comment-show').html($(obj).parent().siblings('.comment-show').html() + "<div><span>我：</span>" + comments + "</div>");
+            $(obj).parent(".commenting").hide();
+        }
+    </script>
+</body>
+
+</html>

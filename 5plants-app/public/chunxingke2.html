@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>唇形科</title>
+    <script src="js/flexible.js"></script>
+    <script src="js/iconfont.js"></script>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/myGuide.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>唇形科</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+    <div class="container">
+        <!-- 图鉴   start -->
+        <div class="my-guide">
+            <a class="my-guide-plant" href="./唇形科/碰碰香.html">
+                <img src="img/多肉图鉴/唇形科/香茶菜属/碰碰香.png" alt="图片加载失败">
+                <h3>碰碰香</h3>
+            </a>
+        </div>
+        <!-- 图鉴    end -->
+    </div>
+
+    <!--底部导航条-->
+    <ul class="tab">
+        <li>
+            <a href="index.html">
+                <i class="iconfont icon-bangbangtang"></i>
+                <br>
+                <span class="tab-label firstTab">肉圈</span>
+            </a>
+        </li>
+        <li>
+            <a href="addVarietys.html">
+                <i class="iconfont icon-zhiwu"></i>
+                <br>
+                <span class="tab-label">养护</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html#mask">
+                <i class="iconfont icon-iconjia"></i>
+            </a>
+        </li>
+        <li>
+            <a href="goodplace.html">
+                <i class="iconfont icon-jishi"></i>
+                <br>
+                <span class="tab-label">带你玩</span>
+            </a>
+        </li>
+        <li>
+            <a href="me-index.html">
+                <i class="iconfont icon-wo"></i>
+                <br>
+                <span class="tab-label">我</span>
+            </a>
+        </li>
+    </ul>
+    <!--底部导航条   end-->
+    <script src="js/jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = 'myGuide.html'
+        }
+    </script>
+</body>
+
+</html>

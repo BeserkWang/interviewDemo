@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>番杏科-黄花照波</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>黄花照波</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/黄花照波.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>黄花照波</h2>
+                <p>拉丁名 Bergeranthus.multiceps</p>
+            </div>
+            <div class="swiper-slide">
+                <p>番杏科</p>
+                <p>照波属</p>
+                <p>该种原产南部非洲，较集中分布于开普省。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    多年生肉质草本，植株无茎，矮小，初单生，后密集成丛生，株高5-6厘米，株幅6-10厘米。
+                    花金黄色，单生，雏菊状，花梗长2-3.5厘米，花径2-2.5厘米；花期夏季，单朵花可开7天。
+                    蒴果肉质；种子极小，多数。喜温暖干燥和阳光充足的环境，不耐寒，耐干旱和半阴，忌水湿及烈日暴晒。需要肥沃、疏松、排水性良好的沙质壤土，生长适温为18-24℃，冬季温度不应低于10℃。
+                    
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/番杏科/照波属/黄花照波.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/番杏科/照波属/黄花照波.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/番杏科/照波属/黄花照波.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../fanxingke3.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

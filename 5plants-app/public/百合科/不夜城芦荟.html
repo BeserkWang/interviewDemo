@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百合科-不夜城芦荟</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>不夜城芦荟</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/不夜城芦荟.jpeg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>不夜城芦荟</h2>
+                <p>拉丁名 Aloe nobilis Haw</p>
+            </div>
+            <div class="swiper-slide">
+                <p>百合科</p>
+                <p>芦荟属</p>
+                <p>原产南非的大卡卢高原和小卡卢高原，现世界多地可栽培。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    喜温暖、干燥、充足而柔和的阳光，耐半阴、干旱，忌盆土积水、过于荫蔽。
+                    它适宜生长温度在20℃左右，低于零度即会受冻，
+                    10℃左右生长近于停顿。土壤最好是沙性土，如是粘性黄泥，宜加入一半砂子，促进疏松透气，
+                    有利排水。不夜城芦荟的繁殖，可结合换盆进行分株，方法是将植株基部萌发的幼苗取下，另行栽种即可。
+                    栽后保持盆土稍有潮气，有根无根都能成活。过于荫蔽,蜘蛛会比较松散,叶片瘦长,根系十分强大,喜欢松软的啥制图及较深花器。
+                    繁殖方式主要是分株扦插。
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/百合科/芦荟属/不夜城芦荟.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/百合科/芦荟属/不夜城芦荟.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/百合科/芦荟属/不夜城芦荟.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../baiheke1.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

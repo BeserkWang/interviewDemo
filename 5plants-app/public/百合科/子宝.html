@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百合科-子宝</title>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myGuides.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <!-- 头部  start -->
+    <header class="header">
+        <h3>子宝</h3>
+        <span class="go-back fl">返回</span>
+    </header>
+    <!-- 头部  end -->
+
+
+    <!-- 滑动资料简介部分 start -->
+    <div class="swiper-container">
+        <img src="../img/plants/子宝.jpg" alt="">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i class="iconfont icon-shouyetubiaoshangjiantougaihou"></i>
+            </div>
+            <div class="swiper-slide">
+                <h2>子宝</h2>
+                <p>拉丁名 Gasteria gracilis Baker</p>
+            </div>
+            <div class="swiper-slide">
+                <p>百合科</p>
+                <p>鲨鱼掌属</p>
+                <p>原产于南非，现世界多地可栽培。</p>
+            </div>
+            <div class="swiper-slide">
+                <b>简介</b>
+                <p>
+                    叶肉质较厚，像舌头，叶面光滑，带有白色 斑点，同种类还有锦斑变异品种，叶片中间会出现白色斑纹，是比较容易发生锦斑变异的品种。
+                    叶面 2～5厘米长，1～2.5厘米宽，暴晒后叶面呈红色。子宝叶片美丽，有带锦与不带锦的，普通的为全绿，不带锦；两种颜色以上为带锦，称子宝锦，颜色不一，各有特色。
+                    花杆由叶舌根部伸出， 花较小，大多为红绿色。一般为冬季至春季为开花旺季.喜欢半阴、通风良好的地方，过多的日照会使原本绿色的叶片变的更深，喜疏松肥沃、排水良好的砂质壤土做栽培基质，
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <h3>图集</h3>
+                <img src="../img/多肉图鉴/百合科/鲨鱼掌属/子宝.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/百合科/鲨鱼掌属/子宝.png" alt="图片加载失败">
+                <img src="../img/多肉图鉴/百合科/鲨鱼掌属/子宝.png" alt="图片加载失败">
+            </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- 滑动资料简介部分 end -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        //按钮返回事件
+        var goBack = document.querySelector('.go-back');
+        goBack.onclick = function () {
+            window.location.href = '../baiheke1.html'
+        }
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            // loop: true,
+            // 如果需要滚动条
+            hashnav:true,
+            scrollbar: '.swiper-scrollbar',
+        })        
+    </script>
+</body>
+
+</html>

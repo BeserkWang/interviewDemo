@@ -1,0 +1,36 @@
+/* 养护部分的tab切换样式 */
+.icon {
+	width: 2.5em;
+    height: 2.5em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+	/*自定义部分*/
+	/*border: 2px solid #d8a1a1;*/
+	border-radius: 50%;
+	padding: 0.0666666667rem;
+	background-color: #88cb84;
+ }
+ 
+ .index-icons {
+ 	width: 100%;
+ 	padding: 0.2rem;
+ 	/*position: absolute;*/
+ 	margin-top: 1.68333333333rem;
+ 	margin-bottom: 0.26666667rem;
+ }
+ .icons {
+ 	width: 100%;
+ 	padding-left: 1.16666666667rem;
+
+ }
+.icons a {
+	display: inline-block;
+	width: 28%;
+	text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+}
+.icons a section {
+	color: #666;
+}

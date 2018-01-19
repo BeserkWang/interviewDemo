@@ -1,0 +1,32 @@
+.container {
+    width: 100%;
+}
+#addcontent {
+    display: block;
+    width: 8rem;
+    height: 2.6667rem;
+    margin:1.3333rem auto;
+    border: 1px solid rgb(148, 144, 144);
+    font-size: 0.4rem;
+}
+.uploadpic {
+    width: 2rem;
+    height: 2rem;
+    /* border: 1px solid #333; */
+    position: relative;
+    top: -0.6667rem;
+    left: 1.3333rem;
+}
+#uploadA {
+    width: 2rem;
+    height: 2rem;
+    /* border: 1px solid #333; */
+    position: relative;
+    top: -2.1333rem;
+    opacity: 0;
+}
+.red {
+    position: relative;
+    top:-1.3333rem;
+    left:-1.0667rem;
+}
