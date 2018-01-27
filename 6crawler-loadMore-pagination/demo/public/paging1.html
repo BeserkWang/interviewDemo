@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分页</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th,
+        tbody {
+            text-align: center;
+        }
+
+        td {
+            width: 150px;
+            height: auto;
+            border: 1px solid #000;
+            text-align: center;
+        }
+
+        #loadMore {
+            display: block;
+            margin: 0 auto;
+        }
+
+        #paging {
+            list-style: none;
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        ul li {
+            display: inline-block;
+            padding: 5px;
+            background-color: rgb(100, 184, 233);
+            color: white;
+        }
+
+        .current {
+            background-color: #e9d41b;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <th>
+            <tr>
+                <td class="title">title</td>
+                <td class="img">img</td>
+                <td class="author">author</td>
+                <td class="price">price</td>
+            </tr>
+        </th>
+        <tbody class="tr">
+            <!-- 渲染拼接字符串 -->
+        </tbody>
+    </table>
+    <ul id="paging">
+        <li class="pre">&lt;上一页</li>
+        <li class="num start"></li>
+        <li class="num"></li>
+        <li class="num"></li>
+        <li class="num"></li>
+        <li class="num end"></li>
+        <li class="next">&gt;下一页</li>
+    </ul>
+    <script src="./lib/jquery-1.9.1.js"></script>
+    <script>
+        function isArray(o) {
+            return Object.prototype.toString.call(o) == '[object Array]';
+        }
+        $.post('/bookdetail', function (data) {
+            var book = JSON.parse(data);
+            var pageData = [];
+            for (var i = 0; i < book.length; i++) {
+                pageData.push(book[i])
+            }
+            console.log(isArray(pageData))
+            //分页的函数
+            function paging(currentpage, totalpage, pagesSize) {
+                this.currentpage = currentpage; //当前页
+                this.totalpage = totalpage; //总数据量
+                this.pagesSize = pagesSize; //每页显示的数量
+                this.pages = Math.ceil(this.totalpage / this.pagesSize); //总页数
+                var pagesArr = [1, 2, 3, 4, 5];
+                var Apage = $('.num'); //不是数组 将其转为数组
+                var self = this;
+                //初始化页码
+                initPageNum(pagesArr)
+                //初始化页面
+                for (var i = 0; i < Apage.length; i++) {
+                    if (parseInt(Apage[i].innerText) == this.currentpage) {
+                        Apage[i].classList.add('current');
+                        initPage(this.currentpage, this.pagesSize, pageData)
+                    }
+                }
+                //点击相应的页码渲染相应的数据
+                for (var i = 0; i < Apage.length; i++) {
+                    Apage[i].index = i;
+                    Apage[i].onclick = function () {
+                        self.currentpage = parseInt(this.innerText);
+                        console.log(self.currentpage);
+                        current();
+                        this.classList.add('current');
+                        initPage(self.currentpage, self.pagesSize, pageData)
+
+                    }
+                }
+                //点击下一页
+                //如果当前页不是数组中的最后一个 那么移动当前页
+                //如果当前页已经是数组的最后一个但不是最后一页 那么数组第一个出去 最后一个进来 再重新渲染数组 
+                // 如果已经是最后一个且是最后一页 那么弹出当前页是最后一页
+                $('.next').click(function () {
+                    for (var i = 0; i < Apage.length; i++) {
+                        //如果含有某current类
+                        //如果当前页已经是数组的最后一个但不是最后一页 那么数组第一个出去 最后一个进来 再重新渲染数组 
+                        if (Apage[i].className.indexOf('current') > -1 && i == 4 && parseInt(Apage[4].innerText) <
+                            13) {
+                            // console.log(i)
+                            self.currentpage++;
+                            pagesArr.shift();
+                            pagesArr.push(self.currentpage);
+                            initPageNum(pagesArr);
+                            console.log(pagesArr);
+                            initPage(self.currentpage, self.pagesSize, pageData)
+                        } else if (Apage[i].className.indexOf('current') > -1 && i == 4 && parseInt(
+                                Apage[4].innerText) ==
+                            13) {
+                            // 如果已经是最后一个且是最后一页 那么弹出当前页是最后一页
+                            alert('当前已经是最后一页');
+                        } else if (Apage[i].className.indexOf('current') > -1 && i != 4) {
+                            self.currentpage++;
+                            current();
+                            for (var i = 0; i < Apage.length; i++) {
+                                if (parseInt(Apage[i].innerText) == self.currentpage) {
+                                    Apage[i].classList.add('current');
+                                    initPage(self.currentpage, self.pagesSize, pageData)
+                                }
+                            }
+                            console.log(self.currentpage);
+                        } else {}
+                    }
+                })
+                //点击上一页
+                $('.pre').click(function () {
+                    for (var i = 0; i < Apage.length; i++) {
+                        //当前页是第一个li标签但是数字不是第一页
+                        if (Apage[i].className.indexOf('current') > -1 && i == 0 && parseInt(Apage[0].innerText) >
+                            1
+                        ) {
+                            self.currentpage--;
+                            console.log(self.currentpage)
+                            pagesArr.unshift(self.currentpage);
+                            pagesArr.pop();
+                            initPageNum(pagesArr);
+                            console.log(pagesArr);
+                            initPage(self.currentpage, self.pagesSize, pageData)
+                        } else if (Apage[i].className.indexOf('current') > -1 && i == 0 && parseInt(
+                                Apage[0].innerText) ==
+                            1) {
+                            // 如果已经是第一页
+                            alert('当前已经是第一页');
+                        } else if (Apage[i].className.indexOf('current') > -1 && i != 0) {
+                            self.currentpage--;
+                            current();
+                            for (var i = 0; i < Apage.length; i++) {
+                                if (parseInt(Apage[i].innerText) == self.currentpage) {
+                                    Apage[i].classList.add('current');
+                                    initPage(self.currentpage, self.pagesSize, pageData)
+                                }
+                            }
+                            console.log(self.currentpage);
+                        } else {}
+                    }
+                })
+            }
+            paging(1, pageData.length, 10);
+
+        })
+        //高亮显示
+        function current() {
+            for (var j = 0; j < $('.num').length; j++) {
+                $('.num')[j].classList.remove('current');
+            }
+        }
+        //渲染标签页码的函数
+        function initPageNum(Arr) {
+            for (var i = 0; i < Arr.length; i++) {
+                $('.num')[i].innerText = Arr[i];
+            }
+        }
+        //渲染页面
+        function initPage(currentpage, pageSize, data) {
+            $('.tr').html('');
+            for (var x = (currentpage - 1) * pageSize; x < (currentpage - 1) * pageSize +
+                pageSize; x++) {
+                str =
+                    `
+                        <tr>
+                        <td class="titles">${data[x].title}</td>
+                        <td class="imgs"><img src="${data[x].img}" /></td>
+                        <td class="authors">${data[x].author}</td>
+                        <td class="prices">${data[x].price}</td>
+                        </tr>
+                        `;
+                $('.tr').append(str);
+            }
+        }
+    </script>
+</body>
+
+</html>

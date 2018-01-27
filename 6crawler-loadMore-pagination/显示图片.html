@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="input-file" class="upload" type="file" value="">
+    <img src="" alt="">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script>
+        $(function () {
+            $('.upload').change(function () {
+                var oFReader = new FileReader();
+                var file = document.getElementById('input-file').files[0];
+                oFReader.readAsDataURL(file);
+                oFReader.onloadend = function (oFRevent) {
+                    var src = oFRevent.target.result;
+                    $('img').attr('src', src);
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

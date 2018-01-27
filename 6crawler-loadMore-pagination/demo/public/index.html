@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>点击加载更多</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        td {
+            width: 150px;
+            height: auto;
+            border: 1px solid #000;
+            text-align: center;
+        }
+
+        #loadMore {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="./paging1.html">分页效果</a>
+    <table>
+        <tr>
+            <td class="title">title</td>
+            <td class="img">img</td>
+            <td class="author">author</td>
+            <td class="price">price</td>
+        </tr>
+    </table>
+    <button id="loadMore">加载更多</button>
+    <script src="./lib/jquery-1.9.1.js"></script>
+    <script>
+        //当点击加载更多的时候会依次加载相同条数的数据
+        $.post('/bookdetail', function (data) {
+            //取到的所有数据
+            // console.log(JSON.parse(data));
+            var books = JSON.parse(data);
+            console.log(books)
+            //假设一次加载10条数据
+            var pageData = 10;
+            //加载的总数
+            var totalData = 0;
+            //加载次数
+            var count = 0;
+            //数据总长度
+            var sum = books.length;
+            console.log(sum)
+            $('#loadMore').on('click', function () {
+                console.log(count); //有输出
+                if ((sum - count * pageData) > pageData) {
+                    console.log('aaa')
+                    console.log('2' + count);
+                    for (var i = count * pageData; i < count * pageData + pageData; i++) {
+                        console.log(books[i])
+                        //初始化数据
+                        str =
+                            `<tr>
+                        <td class="titles">${books[i].title}</td>
+                        <td class="imgs"><img src="${books[i].img}" /></td>
+                        <td class="authors">${books[i].author}</td>
+                        <td class="prices">${books[i].price}</td>
+                        </tr>`;
+                        $('table').append(str);
+                    }
+                } else {
+                    //当最后剩余数据长度小于加载条数时
+                    for (var i = count * pageData; i < (count * pageData + (sum - count * pageData)); i++) {
+                        //初始化数据
+                        str =
+                            `<tr>
+                        <td class="titles">${books[i].title}</td>
+                        <td class="imgs"><img src="${books[i].img}" /></td>
+                        <td class="authors">${books[i].author}</td>
+                        <td class="prices">${books[i].price}</td>
+                        </tr>`;
+                        $('table').append(str);
+                        $('#loadMore').css({
+                            'display': 'none',
+                        })
+                    }
+                }
+                count++;
+            })
+        })
+        
+    </script>
+</body>
+
+</html>
